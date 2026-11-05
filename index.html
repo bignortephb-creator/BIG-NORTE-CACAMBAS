@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BIG NORTE | Gestão de Caçambas — Protótipo</title><style>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BIG NORTE - GESTÃO DE CAÇAMBAS</title><style>
 :root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#15243a;background:#f3f6fa}*{box-sizing:border-box}body{margin:0}header{background:var(--bn-header,#102b49);color:white;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}header strong{font-size:22px}header small{display:block;opacity:.8}main{max-width:1250px;margin:auto;padding:20px}nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}button,select,input,textarea{font:inherit}button{border:0;border-radius:8px;padding:10px 13px;cursor:pointer;background:#e4ebf4;color:#183453;font-weight:600}button.primary{background:var(--bn-primary,#1767c1);color:white}button.danger{background:#fee2e2;color:#991b1b}button:disabled{opacity:.5;cursor:not-allowed}nav button.active{background:var(--bn-primary,#1767c1);color:white}.panel{background:white;border:1px solid #dce5f0;border-radius:14px;padding:18px;margin-bottom:16px;box-shadow:0 2px 8px #0d254008}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.muted{color:#607086;font-size:13px}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:15px 0}.stat{background:#f3f6fa;border-radius:10px;padding:14px}.stat b{font-size:25px;display:block}.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:9px}.tile{height:52px;color:white;border-radius:9px;font-size:17px}.tile:hover{outline:3px solid #15243a55}.legend{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}.dot{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px}label{display:block;font-size:13px;font-weight:650;margin-bottom:4px}input,select,textarea{border:1px solid #cbd5e1;border-radius:8px;padding:10px;width:100%;background:white;color:#15243a}textarea{min-height:70px}.formgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}.formgrid>div{min-width:0}.item{border:1px solid #dce5f0;border-radius:10px;padding:14px;margin:9px 0}.pill{font-size:12px;border-radius:50px;background:#e7eff9;padding:5px 9px}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.hidden{display:none!important}.notice{padding:12px;background:#fff5d8;border-radius:9px;margin:10px 0}.success{background:#e6f6ec}.modalback{position:fixed;inset:0;background:#0b1724aa;display:grid;place-items:center;padding:14px;z-index:20}.modal{background:white;border-radius:14px;padding:20px;max-width:620px;width:100%;max-height:92vh;overflow:auto}.empty{padding:25px;text-align:center;color:#66778b}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid #e1e8f0;white-space:nowrap}h1,h2,h3{margin:0 0 12px}h2{font-size:20px}h3{font-size:16px}.foot{margin:20px 0;color:#68768a;font-size:12px}@media(max-width:600px){main{padding:12px}.panel{padding:13px}header{padding:14px}.tiles{grid-template-columns:repeat(5,minmax(0,1fr))}}
  .signature-pad{width:100%;height:170px;background:white;border:2px dashed #94a3b8;border-radius:8px;touch-action:none}.photo-preview{max-width:100%;max-height:220px;object-fit:contain;border-radius:8px}.os-detail{background:#eff6ff;padding:12px;border-radius:8px;margin:12px 0}.modal{max-height:92vh;overflow-y:auto} 
 /* Menu lateral responsivo */
@@ -7,15 +7,15 @@ body{padding-left:var(--bn-sidebar-width)}
 header{position:relative;z-index:4}
 main{max-width:none;margin:0;padding:22px 26px}
 #nav{position:fixed;left:0;top:0;bottom:0;width:var(--bn-sidebar-width);background:var(--bn-header,#102b49);padding:24px 12px;display:flex;flex-direction:column;flex-wrap:nowrap;gap:5px;margin:0;overflow-y:auto;z-index:12;box-shadow:2px 0 12px #102b4922}
-#nav:before{content:'BIG NORTE\A Gestão de Caçambas';white-space:pre;display:block;color:white;font-weight:800;line-height:1.5;font-size:16px;padding:10px 12px 20px;border-bottom:1px solid #ffffff33;margin-bottom:10px}
+#nav:before{content:'BIG NORTE\A GESTÃO DE CAÇAMBAS';white-space:pre;display:block;color:white;font-weight:800;line-height:1.5;font-size:16px;padding:10px 12px 20px;border-bottom:1px solid #ffffff33;margin-bottom:10px}
 #nav button{width:100%;text-align:left;display:block;background:transparent;color:#edf3ff;border-radius:9px;padding:12px 14px;font-size:14px;font-weight:550}
 #nav button:hover{background:#ffffff22}
 #nav button.active{background:var(--bn-primary,#1767c1);color:white}
 #menuToggle{display:none;background:#ffffff25;color:white;border:1px solid #ffffff55;padding:8px 12px}
 #menuShade{display:none}
 @media(max-width:850px){body{padding-left:0}header{padding:12px 14px}main{padding:12px}#menuToggle{display:inline-flex;align-items:center;justify-content:center}#nav{transform:translateX(-105%);transition:transform .2s ease;box-shadow:4px 0 20px #0003}body.menu-open #nav{transform:translateX(0)}body.menu-open #menuShade{display:block;position:fixed;inset:0;background:#08172c99;z-index:11}header strong{font-size:18px}header small{font-size:10px}}
-</style><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><style>#mapaCaçambas{height:470px;min-height:340px;border-radius:12px;border:1px solid #cbd5e1}.map-help{font-size:13px;color:#475569}</style></head><body><header><div style="display:flex;align-items:center;gap:12px"><button type="button" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰ Menu</button><img id="logoCabecalho" alt="Logo da empresa" style="display:none;width:55px;height:55px;object-fit:contain;border-radius:7px;background:white;padding:3px"><div><strong id="nomeCabecalho">BIG NORTE</strong><small>GESTÃO DE CAÇAMBAS • ACESSO IDENTIFICADO</small></div></div><div style="display:flex;gap:8px;align-items:center"><span id="usuarioLogado" style="font-size:13px"></span><button type="button" id="btnCriarUsuario" onclick="abrirCadastroUsuario()" style="display:none">+ Criar usuário</button><button type="button" onclick="sairSistema()" id="btnSair" style="display:none">Sair</button><select id="perfil" style="display:none" aria-hidden="true"><option value="admin">Administrador</option><option value="administrativo">Administrativo</option><option value="motorista">Motorista</option></select></div></header><main><div class="notice">Versão em reconstrução: colaboradores sincronizados com Supabase. Os demais módulos operacionais ainda utilizam armazenamento local e NÃO estão prontos para produção.</div><div id="menuShade" onclick="closeMenu()"></div><nav id="nav" aria-label="Menu principal"></nav><div id="app"></div><div class="foot">BIG NORTE • Protótipo operacional v0.1 • Não utilizar como sistema de produção.</div></main><div id="modalroot"></div><div id="loginTela" style="position:fixed;inset:0;background:#eef3f8;z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="width:min(430px,100%);background:white;border-radius:14px;padding:28px;box-shadow:0 12px 35px #0002"><h2 style="margin:0 0 8px">BIG NORTE — Caçambas</h2><p style="color:#475569">Administrador: e-mail e senha. Funcionários: nome de usuário e senha.</p><form id="formLogin"><label for="emailLogin">E-mail ou nome de usuário</label><input id="emailLogin" type="text" autocomplete="username" required style="width:100%;margin-bottom:12px"><label for="senhaLogin">Senha</label><input id="senhaLogin" type="password" autocomplete="current-password" required style="width:100%;margin-bottom:14px"><button class="primary" type="submit" id="entrarBtn" style="width:100%">Entrar</button><p id="erroLogin" role="alert" style="color:#b91c1c;min-height:24px"></p></form><p style="font-size:12px;color:#64748b">Acesso exclusivo a usuários cadastrados e ativos.</p></div></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script><script>
-const KEY='bn_cacambas_demo_v1';const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const today=()=>new Date().toISOString().slice(0,10);const addDays=(d,n)=>{let x=new Date(d+'T12:00:00');x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};const uid=()=>Math.random().toString(36).slice(2,10);const initial=()=>({cacambas:Array.from({length:100},(_,i)=>({n:i+1,maintenance:false})),clientes:[],colaboradores:[],equipes:[],veiculos:[],agenda:[],locacoes:[],seq:{},historico:[],config:{nome:"BIG NORTE",razao:"",cnpj:"",telefone:"",whatsapp:"",email:"",endereco:"",bairro:"",cidade:"Parnaíba",uf:"PI",cep:"",linkAvaliacao:"",logo:"",corPrincipal:"#1767c1",corCabecalho:"#102b49"}});let db;try{db=JSON.parse(localStorage.getItem(KEY))||initial()}catch{db=initial()}db.orcamentos ||= []; db.recibos ||= []; db.avaliacoes ||= []; db.colaboradores ||= []; db.equipes ||= []; db.veiculos ||= []; db.config ||= initial().config; let assinaturaColNova=null;let assinaturaColDesenhada=false;let view='painel',filter='todas',search='',driver='Motorista 1';function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}function log(msg){db.historico.unshift({at:new Date().toLocaleString('pt-BR'),msg})}function aluguel(n){return db.locacoes.find(l=>l.n===n&&!l.retirada)}function status(n){let c=db.cacambas.find(x=>x.n===n);if(c?.maintenance)return'manutencao';let l=aluguel(n);if(!l)return'disponivel';if(l.retiradaAgendada)return'retirada';let dif=Math.round((new Date(l.vencimento+'T12:00:00')-new Date(today()+'T12:00:00'))/86400000);return dif<0?'vencida':dif<=1?'amanha':'locada'}const types={disponivel:['Disponível','#16a34a'],locada:['Locada','#2563eb'],amanha:['Vence em até 1 dia','#eab308'],retirada:['Retirada agendada','#f97316'],vencida:['Vencida','#dc2626'],manutencao:['Manutenção','#808080']};function btn(label,fn,cls=''){return `<button class="${cls}" onclick="${fn}">${label}</button>`}let cameraStream=null;function pararCamera(){if(cameraStream){cameraStream.getTracks().forEach(t=>t.stop());cameraStream=null}}function modal(html){pararCamera();$('#modalroot').innerHTML=`<div class="modalback" onclick="if(event.target===this)closeModal()"><div class="modal">${html}</div></div>`}function closeModal(){pararCamera();$('#modalroot').innerHTML=''}function field(label,name,type='text',val='',extra=''){return `<div><label>${label}</label><input name="${name}" type="${type}" value="${esc(val)}" ${extra}></div>`}function select(label,name,options){return `<div><label>${label}</label><select name="${name}">${options.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join('')}</select></div>`}function getForm(id){return Object.fromEntries(new FormData(document.getElementById(id)).entries())}function optionsClientes(){return db.clientes.map(c=>[c.id,c.nome])}function cliente(id){return db.clientes.find(c=>c.id===id)}function closeMenu(){document.body.classList.remove("menu-open");const b=document.getElementById("menuToggle");if(b)b.setAttribute("aria-expanded","false")}function toggleMenu(){const open=document.body.classList.toggle("menu-open");document.getElementById("menuToggle").setAttribute("aria-expanded",String(open))}function navTo(v){view=v;closeMenu();render()}function render(){if(!usuarioAutenticado)return;aplicarIdentidade();const isDriver=$('#perfil').value==='motorista';let tabs=isDriver?[['tarefas','Minhas tarefas']]:[['painel','Painel'],['mapa','Mapa de caçambas'],['agenda','Agenda'],['clientes','Clientes e obras'],['colaboradores','Colaboradores'],['equipes','Equipes'],['veiculos','Veículos'],['locacoes','Locações'],['ordens','Ordens de Serviço'],['relatorios','Relatórios'],['configuracoes','⚙ Configurações'],...(usuarioAutenticado?.perfil==='administrador'?[['usuarios','Usuários']]:[])];if(isDriver&&view!=='tarefas')view='tarefas';if(!isDriver&&view==='tarefas')view='painel';$('#nav').innerHTML=tabs.map(([v,l])=>btn(l,`navTo('${v}')`,view===v?'active':'')).join('');$('#app').innerHTML=({painel,mapa,agenda,clientes,colaboradores,equipes,veiculos,locacoes,ordens,relatorios,tarefas,configuracoes,usuarios}[view])();if(view==='mapa')setTimeout(iniciarMapa,0)}
+</style><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><style>#mapaCaçambas{height:470px;min-height:340px;border-radius:12px;border:1px solid #cbd5e1}.map-help{font-size:13px;color:#475569}</style></head><body><header><div style="display:flex;align-items:center;gap:12px"><button type="button" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰ Menu</button><img id="logoCabecalho" alt="Logo da empresa" style="display:none;width:55px;height:55px;object-fit:contain;border-radius:7px;background:white;padding:3px"><div><strong id="nomeCabecalho">BIG NORTE - GESTÃO DE CAÇAMBAS</strong><small>GESTÃO DE CAÇAMBAS • ACESSO IDENTIFICADO</small></div></div><div style="display:flex;gap:8px;align-items:center"><span id="usuarioLogado" style="font-size:13px"></span><button type="button" id="btnCriarUsuario" onclick="abrirCadastroUsuario()" style="display:none">+ Criar usuário</button><button type="button" onclick="sairSistema()" id="btnSair" style="display:none">Sair</button><select id="perfil" style="display:none" aria-hidden="true"><option value="admin">Administrador</option><option value="administrativo">Administrativo</option><option value="motorista">Motorista</option></select></div></header><main><div class="notice">BIG NORTE - GESTÃO DE CAÇAMBAS • Sistema integrado ao Supabase.</div><div id="menuShade" onclick="closeMenu()"></div><nav id="nav" aria-label="Menu principal"></nav><div id="app"></div><div class="foot">BIG NORTE - GESTÃO DE CAÇAMBAS • Versão consolidada para validação antes da publicação.</div></main><div id="modalroot"></div><div id="loginTela" style="position:fixed;inset:0;background:#eef3f8;z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px"><div style="width:min(430px,100%);background:white;border-radius:14px;padding:28px;box-shadow:0 12px 35px #0002"><h2 style="margin:0 0 8px">BIG NORTE - GESTÃO DE CAÇAMBAS</h2><p style="color:#475569">Administrador: e-mail e senha. Funcionários: nome de usuário e senha.</p><form id="formLogin"><label for="emailLogin">E-mail ou nome de usuário</label><input id="emailLogin" type="text" autocomplete="username" required style="width:100%;margin-bottom:12px"><label for="senhaLogin">Senha</label><input id="senhaLogin" type="password" autocomplete="current-password" required style="width:100%;margin-bottom:14px"><button class="primary" type="submit" id="entrarBtn" style="width:100%">Entrar</button><p id="erroLogin" role="alert" style="color:#b91c1c;min-height:24px"></p></form><p style="font-size:12px;color:#64748b">Acesso exclusivo a usuários cadastrados e ativos.</p></div></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script><script>
+const KEY='bn_cacambas_demo_v1';const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const today=()=>new Date().toISOString().slice(0,10);const addDays=(d,n)=>{let x=new Date(d+'T12:00:00');x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};const uid=()=>Math.random().toString(36).slice(2,10);const initial=()=>({cacambas:[],clientes:[],colaboradores:[],equipes:[],veiculos:[],agenda:[],locacoes:[],seq:{},historico:[],config:{nome:"BIG NORTE - GESTÃO DE CAÇAMBAS",razao:"",cnpj:"",telefone:"",whatsapp:"",email:"",endereco:"",bairro:"",cidade:"Parnaíba",uf:"PI",cep:"",linkAvaliacao:"",logo:"",corPrincipal:"#1767c1",corCabecalho:"#102b49"}});let db;try{db=initial();Object.assign(db,JSON.parse(localStorage.getItem('bn_cacambas_preferencias_v2'))||{config:(JSON.parse(localStorage.getItem(KEY)||'{}').config||initial().config)})}catch{db=initial()}db.orcamentos ||= []; db.recibos ||= []; db.avaliacoes ||= []; db.colaboradores ||= []; db.equipes ||= []; db.veiculos ||= []; db.config ||= initial().config; if(db.config.nome==='BIG NORTE')db.config.nome='BIG NORTE - GESTÃO DE CAÇAMBAS'; let assinaturaColNova=null;let assinaturaColDesenhada=false;let view='painel',filter='todas',search='',driver='Motorista 1';function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}function log(msg){db.historico.unshift({at:new Date().toLocaleString('pt-BR'),msg})}function aluguel(n){return db.locacoes.find(l=>l.n===n&&!l.retirada)}function status(n){let c=db.cacambas.find(x=>x.n===n);if(c?.maintenance)return'manutencao';let l=aluguel(n);if(!l)return'disponivel';if(l.retiradaAgendada)return'retirada';let dif=Math.round((new Date(l.vencimento+'T12:00:00')-new Date(today()+'T12:00:00'))/86400000);return dif<0?'vencida':dif<=1?'amanha':'locada'}const types={disponivel:['Disponível','#16a34a'],locada:['Locada','#2563eb'],amanha:['Vence em até 1 dia','#eab308'],retirada:['Retirada agendada','#f97316'],vencida:['Vencida','#dc2626'],manutencao:['Manutenção','#808080']};function btn(label,fn,cls=''){return `<button class="${cls}" onclick="${fn}">${label}</button>`}let cameraStream=null;function pararCamera(){if(cameraStream){cameraStream.getTracks().forEach(t=>t.stop());cameraStream=null}}function modal(html){pararCamera();$('#modalroot').innerHTML=`<div class="modalback" onclick="if(event.target===this)closeModal()"><div class="modal">${html}</div></div>`}function closeModal(){pararCamera();$('#modalroot').innerHTML=''}function field(label,name,type='text',val='',extra=''){return `<div><label>${label}</label><input name="${name}" type="${type}" value="${esc(val)}" ${extra}></div>`}function select(label,name,options){return `<div><label>${label}</label><select name="${name}">${options.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join('')}</select></div>`}function getForm(id){return Object.fromEntries(new FormData(document.getElementById(id)).entries())}function optionsClientes(){return db.clientes.map(c=>[c.id,c.nome])}function cliente(id){return db.clientes.find(c=>c.id===id)}function closeMenu(){document.body.classList.remove("menu-open");const b=document.getElementById("menuToggle");if(b)b.setAttribute("aria-expanded","false")}function toggleMenu(){const open=document.body.classList.toggle("menu-open");document.getElementById("menuToggle").setAttribute("aria-expanded",String(open))}function navTo(v){view=v;closeMenu();render()}function render(){if(!usuarioAutenticado)return;aplicarIdentidade();const isDriver=$('#perfil').value==='motorista';let tabs=isDriver?[['tarefas','Minhas tarefas']]:[['painel','Painel'],['mapa','Mapa de caçambas'],['agenda','Agenda'],['clientes','Clientes e obras'],['colaboradores','Colaboradores'],['equipes','Equipes'],['veiculos','Veículos'],['locacoes','Locações'],['ordens','Ordens de Serviço'],['relatorios','Relatórios'],['configuracoes','⚙ Configurações'],...(usuarioAutenticado?.perfil==='administrador'?[['usuarios','Usuários']]:[])];if(isDriver&&view!=='tarefas')view='tarefas';if(!isDriver&&view==='tarefas')view='painel';$('#nav').innerHTML=tabs.map(([v,l])=>btn(l,`navTo('${v}')`,view===v?'active':'')).join('');$('#app').innerHTML=({painel,mapa,agenda,clientes,colaboradores,equipes,veiculos,locacoes,ordens,relatorios,tarefas,configuracoes,usuarios}[view])();if(view==='mapa')setTimeout(iniciarMapa,0)}
 function painel(){let counts={};Object.keys(types).forEach(k=>counts[k]=db.cacambas.filter(c=>status(c.n)===k).length);let shown=db.cacambas.filter(c=>(filter==='todas'||status(c.n)===filter)&&String(c.n).includes(search));return `<div class="panel"><div class="row"><h2>Painel das caçambas</h2>${btn('+ Registrar locação existente','novaLocacao()','primary')}</div><div class="stats"><div class="stat">Total<b>${db.cacambas.length}</b></div><div class="stat">Disponíveis<b>${counts.disponivel}</b></div><div class="stat">Locadas / outras<b>${db.cacambas.length-counts.disponivel}</b></div><div class="stat">Vencidas<b>${counts.vencida}</b></div></div><div class="formgrid"><div><label>Buscar número</label><input id="search" placeholder="Ex.: 25" value="${esc(search)}" oninput="search=this.value;render()"></div><div><label>Filtrar situação</label><select onchange="filter=this.value;render()"><option value="todas">Todas</option>${Object.entries(types).map(([k,v])=>`<option value="${k}" ${filter===k?'selected':''}>${v[0]}</option>`).join('')}</select></div></div><div class="legend">${Object.entries(types).map(([k,v])=>`<span><i class="dot" style="background:${v[1]}"></i>${v[0]} (${counts[k]})</span>`).join('')}</div><div class="tiles">${shown.map(c=>`<button class="tile" style="background:${types[status(c.n)][1]}" title="Caçamba ${c.n}: ${types[status(c.n)][0]}" onclick="detalhe(${c.n})">${c.n}</button>`).join('')}</div>${!shown.length?'<div class="empty">Nenhuma caçamba encontrada.</div>':''}</div><div class="panel"><h2>Alertas operacionais</h2>${db.locacoes.filter(l=>!l.retirada&&['amanha','vencida'].includes(status(l.n))).map(l=>`<div class="item">Caçamba <b>${l.n}</b> • ${esc(cliente(l.clienteId)?.nome)} • vencimento ${esc(l.vencimento)} ${btn('WhatsApp',`whats('${l.id}')`)}</div>`).join('')||'<div class="empty">Nenhuma locação próxima do vencimento ou vencida.</div>'}</div>`}
 
 let mapaInstancia=null, marcadoresMapa=null, mapaFiltro=['locada','amanha','retirada','vencida'], mapaNumero='';
@@ -61,7 +61,28 @@ function finalizarManutencao(n){
  log('Manutenção finalizada da caçamba '+n);closeModal();save();
 }
 function toggleMaintenance(n){if(status(n)==='manutencao')finalizarManutencao(n);else iniciarManutencao(n)}
-function novaCliente(){modal(`<h2>Novo cliente e obra</h2><form id="fc" onsubmit="salvarCliente(event)"><div class="formgrid">${field('Nome / razão social','nome','text','','required')}${select('Tipo',['tipo'],[['PF','PF'],['PJ','PJ'],['Empreiteiro','Empreiteiro']])}${field('Telefone principal (WhatsApp)','telefone','tel','','required')}${field('Endereço da obra','endereco','text','','required')}${field('Nome / referência da obra','obra')}<div class="responsavelObra">${field('Responsável pela obra','responsavel')}</div><div class="responsavelObra">${field('Telefone do responsável','telResponsavel','tel')}</div></div><div class="actions"><button class="primary">Salvar cliente</button>${btn('Cancelar','closeModal()')}</div></form>`)}function salvarCliente(e){e.preventDefault();let f=getForm('fc');db.clientes.push({...f,id:uid()});log('Cliente cadastrado: '+f.nome);closeModal();save()}
+function novaCliente(){modal(`<h2>Novo cliente e obra</h2><form id="fc" onsubmit="salvarCliente(event)"><div class="formgrid">${field('Nome / razão social','nome','text','','required')}${select('Tipo',['tipo'],[['PF','PF'],['PJ','PJ'],['Empreiteiro','Empreiteiro']])}${field('Telefone principal (WhatsApp)','telefone','tel','','required')}${field('Endereço da obra','endereco','text','','required')}${field('Nome / referência da obra','obra')}<div class="responsavelObra">${field('Responsável pela obra','responsavel')}</div><div class="responsavelObra">${field('Telefone do responsável','telResponsavel','tel')}</div></div><div class="actions"><button class="primary">Salvar cliente</button>${btn('Cancelar','closeModal()')}</div></form>`)}async function salvarCliente(e){
+ e.preventDefault();
+ const form=e.target, botao=form.querySelector('button.primary');
+ if(botao?.disabled)return;
+ const f=getForm('fc');
+ if(!['PF','PJ'].includes(f.tipo)){alert('Selecione PF ou PJ. O tipo Empreiteiro ainda não é aceito pelo Supabase.');return;}
+ if(!window.confirm('TESTE CONTROLADO: deseja GRAVAR este cliente e sua obra no Supabase? Não use dados fictícios.'))return;
+ if(botao)botao.disabled=true;
+ try{
+   if(typeof supa==='undefined'||!window.BigNorteEtapa15)throw Error('Integração Supabase indisponível.');
+   const c=await window.BigNorteEtapa15.criarCliente(supa,{nome:f.nome,tipo:f.tipo,telefone:f.telefone});
+   let obra=null, erroObra=null;
+   try{obra=await window.BigNorteEtapa15.criarObra(supa,{cliente_id:c.id,nome:f.obra||f.endereco,endereco:f.endereco});}
+   catch(err){erroObra=err;}
+   db.clientes.push({...f,id:c.id,obraSupabaseId:obra?.id||null});
+   log('Cliente registrado no Supabase: '+f.nome);
+   closeModal();save();
+   if(erroObra)alert('Cliente salvo no Supabase, mas a obra NÃO foi salva: '+erroObra.message+'\nNão repita o cadastro do cliente.');
+   else alert('Cliente e obra cadastrados no Supabase.');
+ }catch(err){alert('Não foi possível salvar no Supabase: '+err.message+'\nNenhum cadastro local foi adicionado nesta tentativa.');}
+ finally{if(botao?.isConnected)botao.disabled=false;}
+}
 function clientes(){return `<div class="panel"><div class="row"><h2>Clientes e obras</h2>${btn('+ Novo cliente','novaCliente()','primary')}</div>${db.clientes.map(c=>`<div class="item"><b>${esc(c.nome)}</b> <span class="pill">${esc(c.tipo)}</span><div class="muted">${esc(c.telefone)} • ${esc(c.obra||c.endereco)}</div><div>${esc(c.endereco)}</div></div>`).join('')||'<div class="empty">Os clientes também podem ser cadastrados diretamente pela agenda.</div>'}</div>`}
 function nomeCol(id){return db.colaboradores.find(c=>c.id===id)?.nome||'Não definido'}
 function colaboradores(){return `<div class="panel"><div class="row"><h2>Colaboradores</h2>${btn('+ Novo colaborador','editarColaborador()','primary')}</div><p class="muted">Funções: Administrativo, Motorista e Ajudante. Apenas o motorista acessa as tarefas da equipe.</p>${db.colaboradores.map(c=>`<div class="item"><div class="row"><b>${esc(c.nome)}</b><span class="pill">${esc(c.funcao)} • ${c.ativo===false?'Inativo':'Ativo'}</span></div><div class="muted">${esc(c.telefone||'')} • Assinatura: ${c.assinatura?'cadastrada':'não cadastrada'}</div><div class="actions">${btn('Editar',`editarColaborador('${c.id}')`)}${btn(c.ativo===false?'Ativar':'Desativar',`alternarRegistro('colaboradores','${c.id}')`)}</div></div>`).join('')||'<div class="empty">Nenhum colaborador cadastrado.</div>'}</div>`}
@@ -110,17 +131,73 @@ async function alternarColaboradorSupabase(id){
 }
 function equipes(){return `<div class="panel"><div class="row"><h2>Equipes</h2>${btn('+ Nova equipe','editarEquipe()','primary')}</div><p class="muted">Cada equipe operacional deve ter exatamente 1 motorista e 1 ajudante para receber tarefas. O veículo é definido separadamente.</p>${db.equipes.map(t=>`<div class="item"><div class="row"><b>${esc(t.nome)}</b><span class="pill">${t.ativo===false?'Inativa':'Ativa'}</span></div><div>Motorista: ${esc(nomeCol(t.motoristaId))} • Ajudante: ${esc(nomeCol(t.ajudanteId))}</div><div class="actions">${btn('Editar',`editarEquipe('${t.id}')`)}${btn(t.ativo===false?'Ativar':'Desativar',`alternarRegistro('equipes','${t.id}')`)}</div></div>`).join('')||'<div class="empty">Nenhuma equipe cadastrada.</div>'}</div>`}
 function editarEquipe(id){let t=db.equipes.find(x=>x.id===id)||{};let motoristas=db.colaboradores.filter(c=>c.funcao==='Motorista'&&(c.ativo!==false||c.id===t.motoristaId));let ajudantes=db.colaboradores.filter(c=>c.funcao==='Ajudante'&&(c.ativo!==false||c.id===t.ajudanteId));modal(`<h2>${id?'Editar':'Nova'} equipe</h2><form id="feq" onsubmit="salvarEquipe(event,'${id||''}')"><div class="formgrid">${field('Nome da equipe','nome','text',t.nome||'','required')}${select('Motorista','motoristaId',[['','Definir depois'],...motoristas.map(c=>[c.id,c.nome])])}${select('Ajudante','ajudanteId',[['','Definir depois'],...ajudantes.map(c=>[c.id,c.nome])])}</div><div class="actions"><button class="primary">Salvar equipe</button>${btn('Cancelar','closeModal()')}</div></form>`);document.querySelector('#feq [name=motoristaId]').value=t.motoristaId||'';document.querySelector('#feq [name=ajudanteId]').value=t.ajudanteId||''}
-function salvarEquipe(e,id){e.preventDefault();if(!ehAdministrador()){alert('Somente o administrador pode cadastrar equipes.');return}let f=getForm('feq'),t=db.equipes.find(x=>x.id===id);for(const [campo,funcao] of [['motoristaId','Motorista'],['ajudanteId','Ajudante']]){let cid=f[campo];if(!cid)continue;let c=db.colaboradores.find(x=>x.id===cid);if(!c||c.funcao!==funcao||c.ativo===false){alert('Selecione um '+funcao.toLowerCase()+' ativo e válido.');return}if(db.equipes.some(x=>x.id!==id&&x.ativo!==false&&x[campo]===cid)){alert('Este '+funcao.toLowerCase()+' já pertence a outra equipe ativa.');return}}if(t)Object.assign(t,f);else db.equipes.push({...f,id:uid(),ativo:true});log('Equipe salva: '+f.nome);closeModal();save()}
+async function carregarEquipesVeiculosSupabase(){
+  if(!usuarioAutenticado || usuarioAutenticado.perfil==='motorista')return;
+  const [eq,vei]=await Promise.all([
+    supa.from('equipes').select('id,nome,motorista_id,auxiliar_id,ativo').order('nome'),
+    supa.from('veiculos').select('id,identificacao,placa,modelo,capacidade_m3,ativo').order('identificacao')
+  ]);
+  if(eq.error)throw new Error('Equipes: '+eq.error.message);
+  if(vei.error)throw new Error('Veículos: '+vei.error.message);
+  db.equipes=(eq.data||[]).map(t=>({id:t.id,nome:t.nome,motoristaId:t.motorista_id||'',ajudanteId:t.auxiliar_id||'',ativo:t.ativo}));
+  db.veiculos=(vei.data||[]).map(v=>({id:v.id,identificacao:v.identificacao,placa:v.placa||'',modelo:v.modelo||'',capacidade:v.capacidade_m3??'',ativo:v.ativo}));
+  render();
+}
+async function salvarEquipe(e,id){
+  e.preventDefault();
+  if(usuarioAutenticado?.perfil!=='administrador'){alert('Somente o administrador pode salvar equipes.');return}
+  const f=getForm('feq');
+  for(const [campo,funcao] of [['motoristaId','Motorista'],['ajudanteId','Ajudante']]){
+    if(!f[campo])continue;
+    const c=db.colaboradores.find(x=>x.id===f[campo]);
+    if(!c||c.funcao!==funcao||c.ativo===false){alert('Selecione um '+funcao.toLowerCase()+' ativo.');return}
+    if(db.equipes.some(t=>t.id!==id&&t.ativo!==false&&t[campo]===f[campo])){alert('Colaborador já vinculado a outra equipe ativa.');return}
+  }
+  const registro={nome:f.nome.trim(),motorista_id:f.motoristaId||null,auxiliar_id:f.ajudanteId||null};
+  if(!registro.nome){alert('Informe o nome da equipe.');return}
+  try{
+    const r=id?await supa.from('equipes').update(registro).eq('id',id).select('id').single():await supa.from('equipes').insert({...registro,ativo:true}).select('id').single();
+    if(r.error)throw r.error;
+    await carregarEquipesVeiculosSupabase();closeModal();
+  }catch(err){alert('Não foi possível salvar a equipe no Supabase: '+err.message)}
+}
 function veiculos(){return `<div class="panel"><div class="row"><h2>Veículos</h2>${btn('+ Novo veículo','editarVeiculo()','primary')}</div>${db.veiculos.map(v=>`<div class="item"><div class="row"><b>${esc(v.identificacao)}</b><span class="pill">${v.ativo===false?'Inativo':'Ativo'}</span></div><div class="muted">Placa: ${esc(v.placa||'Não informada')} • Modelo: ${esc(v.modelo||'Não informado')} • Capacidade: ${esc(v.capacidade||'—')} m³</div><div class="actions">${btn('Editar',`editarVeiculo('${v.id}')`)}${btn(v.ativo===false?'Ativar':'Desativar',`alternarRegistro('veiculos','${v.id}')`)}</div></div>`).join('')||'<div class="empty">Nenhum veículo cadastrado.</div>'}</div>`}
 function editarVeiculo(id){let v=db.veiculos.find(x=>x.id===id)||{};modal(`<h2>${id?'Editar':'Novo'} veículo</h2><form id="fvei" onsubmit="salvarVeiculo(event,'${id||''}')"><div class="formgrid">${field('Identificação do veículo','identificacao','text',v.identificacao||'','required')}${field('Placa','placa','text',v.placa||'')}${field('Modelo','modelo','text',v.modelo||'')}${field('Capacidade (m³)','capacidade','number',v.capacidade||'','min="0" step="0.01"')}</div><div class="actions"><button class="primary">Salvar veículo</button>${btn('Cancelar','closeModal()')}</div></form>`)}
-function salvarVeiculo(e,id){e.preventDefault();let f=getForm('fvei'),v=db.veiculos.find(x=>x.id===id);if(v)Object.assign(v,f);else db.veiculos.push({...f,id:uid(),ativo:true});log('Veículo salvo: '+f.identificacao);closeModal();save()}
-function alternarRegistro(tipo,id){if(tipo==='colaboradores'){alternarColaboradorSupabase(id);return}let x=db[tipo].find(x=>x.id===id);if(!x)return;x.ativo=x.ativo===false;log(tipo+' — situação alterada');save()}
+async function salvarVeiculo(e,id){
+  e.preventDefault();
+  if(usuarioAutenticado?.perfil!=='administrador'){alert('Somente o administrador pode salvar veículos.');return}
+  const f=getForm('fvei');
+  const registro={identificacao:f.identificacao.trim(),placa:f.placa.trim()||null,modelo:f.modelo.trim()||null,capacidade_m3:f.capacidade===''?null:Number(f.capacidade)};
+  if(!registro.identificacao|| (registro.capacidade_m3!==null && (!Number.isFinite(registro.capacidade_m3)||registro.capacidade_m3<0))){alert('Confira os dados do veículo.');return}
+  try{
+    const r=id?await supa.from('veiculos').update(registro).eq('id',id).select('id').single():await supa.from('veiculos').insert({...registro,ativo:true}).select('id').single();
+    if(r.error)throw r.error;
+    await carregarEquipesVeiculosSupabase();closeModal();
+  }catch(err){alert('Não foi possível salvar o veículo no Supabase: '+err.message)}
+}
+async function alternarRegistro(tipo,id){
+  if(tipo==='colaboradores'){await alternarColaboradorSupabase(id);return}
+  if(tipo==='equipes'||tipo==='veiculos'){
+    if(usuarioAutenticado?.perfil!=='administrador'){alert('Acesso restrito ao administrador.');return}
+    const registro=db[tipo].find(x=>x.id===id);if(!registro)return;
+    try{
+      const r=await supa.from(tipo).update({ativo:registro.ativo===false}).eq('id',id).select('id').single();
+      if(r.error)throw r.error;
+      await carregarEquipesVeiculosSupabase();
+    }catch(err){alert('Falha ao alterar cadastro no Supabase: '+err.message)}
+    return;
+  }
+  alert('Esta operação ainda utiliza dados locais e não foi migrada.');
+}
 function novaAgenda(){modal(`<h2>Novo agendamento e cadastro do cliente</h2><p class="muted">Cadastre o cliente aqui mesmo. Se ele já existir, selecione-o para reutilizar seus dados.</p><form id="fa" onsubmit="salvarAgenda(event)"><div class="formgrid">${select('Cliente já cadastrado (opcional)','clienteExistente',[['','Novo cliente'],...optionsClientes()])}${field('Nome / razão social','nome','text','','required')}${select('Tipo de cliente','tipoCliente',[['PF','PF'],['PJ','PJ'],['Empreiteiro','Empreiteiro']])}${field('Telefone principal (WhatsApp)','telefone','tel','','required')}${field('Endereço da obra','endereco','text','','required')}${field('Nome / referência da obra','obra')}<div class="responsavelObra">${field('Responsável pela obra','responsavel')}</div><div class="responsavelObra">${field('Telefone do responsável','telResponsavel','tel')}</div>${select('Tipo de serviço','tipo',[['entrega','Entrega'],['troca','Troca'],['retirada','Retirada']])}${field('Data prevista','data','date',today(),'required')}${field('Horário (opcional)','hora','time')}${select('Prioridade','prioridade',[['Normal','Normal'],['Prioritária','Prioritária'],['Urgente','Urgente']])}</div><div><label>Instruções para equipe</label><textarea name="instrucoes"></textarea></div><div class="actions"><button class="primary">Salvar agendamento e cliente</button>${btn('Cancelar','closeModal()')}</div></form>`);let form=document.getElementById('fa');form.elements.tipoCliente.onchange=()=>{form.querySelectorAll('.responsavelObra').forEach(el=>el.style.display=form.elements.tipoCliente.value==='PF'?'none':'');if(form.elements.tipoCliente.value==='PF'){form.elements.responsavel.value='';form.elements.telResponsavel.value=''}};form.elements.tipoCliente.onchange();form.elements.clienteExistente.onchange=function(){let c=cliente(this.value);if(c){form.elements.nome.value=c.nome||'';form.elements.tipoCliente.value=c.tipo||'PF';form.elements.tipoCliente.onchange();form.elements.telefone.value=c.telefone||'';form.elements.endereco.value='';form.elements.obra.value='';form.elements.responsavel.value='';form.elements.telResponsavel.value='';form.elements.nome.required=false;form.elements.telefone.required=false}else{form.elements.nome.value='';form.elements.telefone.value='';form.elements.nome.required=true;form.elements.telefone.required=true}}}function salvarAgenda(e){e.preventDefault();let f=getForm('fa');let cid=f.clienteExistente;if(cid&&!cliente(cid)){alert('Cliente não encontrado.');return}if(!cid){let existente=db.clientes.find(c=>c.nome.trim().toLocaleLowerCase()===f.nome.trim().toLocaleLowerCase()&&c.telefone.replace(/\D/g,'')===f.telefone.replace(/\D/g,''));if(existente){cid=existente.id}else{cid=uid();db.clientes.push({id:cid,nome:f.nome.trim(),tipo:f.tipoCliente,telefone:f.telefone.trim(),endereco:f.endereco,obra:f.obra,responsavel:f.responsavel,telResponsavel:f.telResponsavel,obras:[]});log('Cliente cadastrado pelo agendamento: '+f.nome)}}let c=cliente(cid);if(!c.obras)c.obras=[];if(!c.obras.some(o=>o.endereco.trim().toLocaleLowerCase()===f.endereco.trim().toLocaleLowerCase()))c.obras.push({endereco:f.endereco,obra:f.obra,responsavel:f.responsavel,telResponsavel:f.telResponsavel});db.agenda.push({tipo:f.tipo,clienteId:cid,endereco:f.endereco,obra:f.obra,responsavel:f.responsavel,telResponsavel:f.telResponsavel,data:f.data,hora:f.hora,prioridade:f.prioridade,instrucoes:f.instrucoes,id:uid(),situacao:'agendado',motorista:'',tentativas:[]});log('Agendamento criado: '+f.tipo+' • '+c.nome);closeModal();save()}
-function agenda(){return `<div class="panel"><div class="row"><h2>Agenda operacional</h2>${btn('+ Novo agendamento','novaAgenda()','primary')}</div><p class="muted">A tarefa só recebe número oficial de OS após confirmação da entrega. Retiradas e trocas são vinculadas às locações.</p>${db.agenda.slice().reverse().map(a=>`<div class="item"><div class="row"><b>${a.tipo.toUpperCase()} • ${esc(cliente(a.clienteId)?.nome)}</b><span class="pill">${esc(a.situacao)}</span></div><div>${esc(a.endereco)}</div><div class="muted">${esc(a.data)} ${esc(a.hora)} • ${esc(a.prioridade)} • ${esc(a.motorista||'Sem equipe')}</div>${a.instrucoes?`<div class="notice">${esc(a.instrucoes)}</div>`:''}<div class="actions">${a.situacao!=='concluido'&&a.situacao!=='cancelado'?btn('Encaminhar / alterar equipe',`atribuir('${a.id}')`,'primary'):''}${a.situacao!=='concluido'&&a.situacao!=='cancelado'?btn('Reagendar',`reagendar('${a.id}')`):''}${a.situacao!=='concluido'&&a.situacao!=='cancelado'?btn('Cancelar',`cancelar('${a.id}')`,'danger'):''}</div></div>`).join('')||'<div class="empty">Nenhum agendamento cadastrado.</div>'}</div>`}
+function agenda(){return `<div class="panel"><div class="row"><h2>Agenda operacional</h2><button type="button" onclick="consultarAgendaSupabaseEtapa11()">Consultar Agenda no Supabase (leitura)</button><button type="button" onclick="verificarModuloEtapa16()">Verificar módulo Etapa 16 (leitura)</button>${btn('+ Novo agendamento','novaAgenda()','primary')}</div><p class="muted">A tarefa só recebe número oficial de OS após confirmação da entrega. Retiradas e trocas são vinculadas às locações.</p>${db.agenda.slice().reverse().map(a=>`<div class="item"><div class="row"><b>${a.tipo.toUpperCase()} • ${esc(cliente(a.clienteId)?.nome)}</b><span class="pill">${esc(a.situacao)}</span></div><div>${esc(a.endereco)}</div><div class="muted">${esc(a.data)} ${esc(a.hora)} • ${esc(a.prioridade)} • ${esc(a.motorista||'Sem equipe')}</div>${a.instrucoes?`<div class="notice">${esc(a.instrucoes)}</div>`:''}<div class="actions">${a.situacao!=='concluido'&&a.situacao!=='cancelado'?btn('Encaminhar / alterar equipe',`atribuir('${a.id}')`,'primary'):''}${a.situacao!=='concluido'&&a.situacao!=='cancelado'?btn('Reagendar',`reagendar('${a.id}')`):''}${a.situacao!=='concluido'&&a.situacao!=='cancelado'?btn('Cancelar',`cancelar('${a.id}')`,'danger'):''}</div></div>`).join('')||'<div class="empty">Nenhum agendamento cadastrado.</div>'}</div>`}
 function atribuir(id){let a=db.agenda.find(x=>x.id===id);let equipesProntas=db.equipes.filter(t=>t.ativo!==false&&t.motoristaId&&t.ajudanteId&&db.colaboradores.some(c=>c.id===t.motoristaId&&c.ativo!==false&&c.funcao==='Motorista')&&db.colaboradores.some(c=>c.id===t.ajudanteId&&c.ativo!==false&&c.funcao==='Ajudante'));if(!equipesProntas.length){alert('Cadastre uma equipe ativa com 1 motorista e 1 ajudante ativos antes de encaminhar.');navTo('equipes');return}modal(`<h2>Encaminhar tarefa provisória</h2><p>${esc(a.tipo)} • ${esc(a.endereco)}</p><form id="fat" onsubmit="salvarAtrib(event,'${id}')"><div class="formgrid">${select('Equipe','equipeId',equipesProntas.map(t=>[t.id,t.nome+' — '+nomeCol(t.motoristaId)+' + '+nomeCol(t.ajudanteId)]))}${select('Veículo','veiculoId',[['','Definir depois'],...db.veiculos.filter(v=>v.ativo!==false).map(v=>[v.id,v.identificacao+' — '+v.placa])])}</div><div class="actions"><button class="primary">Encaminhar tarefa</button>${btn('Cancelar','closeModal()')}</div></form>`)}
 function salvarAtrib(e,id){e.preventDefault();let a=db.agenda.find(x=>x.id===id),f=getForm('fat'),t=db.equipes.find(x=>x.id===f.equipeId);if(!t||!t.motoristaId||!t.ajudanteId){alert('Selecione uma equipe completa.');return}Object.assign(a,{equipeId:t.id,motoristaId:t.motoristaId,ajudanteId:t.ajudanteId,motorista:nomeCol(t.motoristaId),auxiliar:nomeCol(t.ajudanteId),veiculoId:f.veiculoId,caminhao:db.veiculos.find(v=>v.id===f.veiculoId)?.identificacao||'',situacao:'encaminhado'});log('Tarefa encaminhada para equipe '+t.nome+' / motorista '+a.motorista);closeModal();save()}
 function reagendar(id){let a=db.agenda.find(x=>x.id===id);let data=prompt('Nova data (AAAA-MM-DD):',a.data);if(!data)return;if(!/^\d{4}-\d{2}-\d{2}$/.test(data)){alert('Data inválida.');return}a.data=data;log('Tarefa reagendada para '+data);save()}function cancelar(id){let motivo=prompt('Motivo do cancelamento:');if(!motivo?.trim())return;let a=db.agenda.find(x=>x.id===id);a.situacao='cancelado';a.motivoCancelamento=motivo;log('Agendamento cancelado: '+motivo);save()}
-function tarefas(){let motoristas=db.colaboradores.filter(c=>c.funcao==='Motorista'&&c.ativo!==false);if(usuarioAutenticado?.perfil==='motorista'&&usuarioAutenticado.colaborador_id){motoristas=motoristas.filter(c=>c.id===usuarioAutenticado.colaborador_id);driver=usuarioAutenticado.colaborador_id}if(!motoristas.some(c=>c.id===driver))driver=motoristas[0]?.id||'';return `<div class="panel"><div class="row"><h2>Tarefas do motorista</h2><select style="max-width:240px" onchange="driver=this.value;render()">${motoristas.map(c=>`<option value="${c.id}" ${driver===c.id?'selected':''}>${esc(c.nome)}</option>`).join('')}</select></div><p class="muted">Tarefas demonstrativas armazenadas neste navegador; sincronização e autorização no servidor pendentes.</p>${db.agenda.filter(a=>a.motoristaId===driver&&a.situacao==='encaminhado').map(a=>`<div class="item"><div class="row"><b>${esc(a.tipo.toUpperCase())} ${a.os?'• OS '+esc(a.os):'• Tarefa provisória'}</b><span class="pill">${esc(a.situacao)}</span></div><div>${esc(cliente(a.clienteId)?.nome)} • ${esc(a.endereco)}</div><div class="muted">${esc(a.data)} ${esc(a.hora)} • Ajudante: ${esc(a.auxiliar||'')} • Veículo: ${esc(a.caminhao||'a definir')}</div>${a.instrucoes?`<div class="notice"><b>Instruções:</b> ${esc(a.instrucoes)}</div>`:''}<div class="actions">${btn('Abrir '+(a.os?'OS':'tarefa'),`abrirOS('${a.id}')`,'primary')}${a.situacao==='encaminhado'?btn('Não executada',`naoExecutada('${a.id}')`,'danger'):''}</div></div>`).join('')||'<div class="empty">Nenhuma tarefa para este motorista.</div>'}</div>`}
+function tarefas(){
+  if(usuarioAutenticado?.perfil!=='motorista')return '<div class="panel">Área exclusiva do motorista.</div>';
+  return `<div class="panel"><h2>Minhas tarefas — Supabase (teste)</h2><p class="muted">Consulta remota somente leitura. Nenhuma tarefa local é exibida como tarefa oficial.</p><div class="actions">${btn('Atualizar tarefas','bnConsultarTarefasRemotas()','primary')}</div><div id="bn-tarefas-remotas" class="muted">Clique em Atualizar tarefas para consultar o banco.</div></div>`;
+}
 function naoExecutada(id){let motivo=prompt('Informe obrigatoriamente o motivo da não execução:');if(!motivo?.trim())return;let a=db.agenda.find(x=>x.id===id);a.tentativas.push({data:new Date().toLocaleString('pt-BR'),motivo});a.situacao='nao_executada';log('Serviço não executado: '+motivo);save()}
 let fotoTemporaria='';let tarefaFotoAtual=null;let assinaturaAlterada=false;let gpsTemporario=null;function capturarGPS(){let el=document.getElementById('gpsEstado');if(!navigator.geolocation){el.textContent='GPS não disponível neste navegador.';return}el.textContent='Solicitando localização...';navigator.geolocation.getCurrentPosition(p=>{gpsTemporario={lat:p.coords.latitude,lng:p.coords.longitude,precisao:p.coords.accuracy};el.textContent='GPS registrado (precisão aproximada: '+Math.round(p.coords.accuracy)+' m).'},err=>{el.textContent='Não foi possível obter GPS: '+err.message+'. Verifique permissão e HTTPS.'},{enableHighAccuracy:true,timeout:15000})}
 function abrirOS(id){let a=db.agenda.find(x=>x.id===id);if(!a)return;tarefaFotoAtual=id;fotoTemporaria='';assinaturaAlterada=false;gpsTemporario=null;let concluida=a.situacao==='concluido';let livre=db.cacambas.filter(c=>status(c.n)==='disponivel');modal(`<h2>${a.os?'Ordem de Serviço '+esc(a.os):'Tarefa de '+esc(a.tipo)}</h2><div class="os-detail"><b>Cliente:</b> ${esc(cliente(a.clienteId)?.nome)}<br><b>Endereço:</b> ${esc(a.endereco)}<br><b>Equipe:</b> ${esc(a.motorista)} / ${esc(a.auxiliar)}<br><b>Veículo:</b> ${esc(a.caminhao||'Não informado')}<br><b>Data prevista:</b> ${esc(a.data)} ${esc(a.hora||'')}<br><b>Status:</b> ${concluida?'Concluída':'Aguardando execução'}</div>${a.instrucoes?`<div class="notice"><b>Instruções:</b> ${esc(a.instrucoes)}</div>`:''}${a.observacoes?.length?`<h3>Observações registradas</h3>${a.observacoes.map(o=>`<div class="item">${esc(o.data)} — ${esc(o.texto)}</div>`).join('')}`:''}${a.fotos?.length?`<h3>Fotos registradas</h3><div class="row" style="flex-wrap:wrap">${a.fotos.map(f=>`<img class="photo-preview" src="${f}" alt="Foto da entrega">`).join('')}</div>`:''}${a.assinatura?`<h3>Assinatura do recebedor</h3><img class="photo-preview" src="${a.assinatura}" alt="Assinatura">`:''}<form id="fos" onsubmit="salvarOS(event,'${id}')">${!concluida&&a.tipo==='troca'?`<h3>Troca de caçamba</h3><p>Retirar a caçamba atual e entregar outra disponível.</p><div class="formgrid">${select('Nova caçamba disponível','nTroca',livre.map(c=>[c.n,'Nº '+c.n]))}${select('Novo prazo','prazoTroca',[[7,'7 dias'],[15,'15 dias'],[30,'30 dias']])}</div>`:''}${!concluida&&a.tipo==='entrega'?`<h3>Dados da entrega</h3><div class="formgrid">${select('Caçamba disponível','n',livre.map(c=>[c.n,'Nº '+c.n]))}${select('Prazo da locação','prazo',[[7,'7 dias'],[15,'15 dias'],[30,'30 dias']])}${field('Nome de quem recebeu','recebedor')}${select('Comprovação da entrega','recebimento',[['assinado','Assinatura do recebedor'],['autorizado','Cliente autorizou entrega sem assinatura']])}</div><div id="areaAssinatura"><label>Assinatura do cliente ou responsável (assine com o dedo ou mouse)</label><canvas id="assinaturaCanvas" class="signature-pad"></canvas><div class="actions">${btn('Limpar assinatura','limparAssinatura()')}</div></div>`:''}<h3>Localização da entrega</h3><div class="actions"><button type="button" onclick="capturarGPS()">📍 Registrar GPS da entrega</button></div><div id="gpsEstado" class="muted">GPS ainda não registrado nesta tarefa.</div><h3>Registro fotográfico</h3><p class="muted">A foto será salva com logo, data/hora, endereço da tarefa e coordenadas, quando o GPS tiver sido registrado. Para incluir GPS, registre a posição antes de tirar a foto.</p><div class="actions"><button type="button" class="primary" onclick="abrirCamera()">📷 Tirar foto</button><button type="button" onclick="document.getElementById('fotoOS').click()">Selecionar foto</button></div><input type="file" id="fotoOS" accept="image/*" capture="environment" onchange="prepararFoto(this)" style="position:absolute;left:-9999px;width:1px;height:1px" aria-label="Selecionar fotografia"><div id="cameraArea" class="hidden"><video id="cameraVideo" autoplay playsinline muted style="width:100%;max-height:320px;background:#111;border-radius:8px;margin-top:10px"></video><div class="actions"><button type="button" class="primary" onclick="capturarCamera()">Capturar fotografia</button><button type="button" onclick="fecharCamera()">Cancelar câmera</button></div></div><div id="previewFoto"></div><h3>Observações do motorista</h3><textarea name="observacao" rows="4" placeholder="Registre observações sobre o serviço"></textarea><div class="actions"><button class="primary">${concluida?'Adicionar registros':a.tipo==='entrega'?'Confirmar entrega e gerar OS':a.tipo==='retirada'?'Confirmar retirada da caçamba':'Salvar registros'}</button>${btn('Fechar','closeModal()')}</div></form>`);if(!concluida&&a.tipo==='entrega'){let sel=document.querySelector('#fos [name=recebimento]');sel.onchange=()=>{$('#areaAssinatura').style.display=sel.value==='assinado'?'block':'none'};iniciarAssinatura()} }
@@ -153,7 +230,7 @@ async function finalizarFotoCarimbada(imagem){
 }
 async function capturarCamera(){let v=$('#cameraVideo');if(!v||!cameraStream||!v.videoWidth){alert('Aguarde a câmera carregar.');return}await finalizarFotoCarimbada(v);fecharCamera()}
 function prepararFoto(input){let file=input.files?.[0];if(!file)return;let img=new Image();let url=URL.createObjectURL(file);img.onload=async()=>{try{await finalizarFotoCarimbada(img)}finally{URL.revokeObjectURL(url)}};img.onerror=()=>{alert('Não foi possível abrir esta imagem.');URL.revokeObjectURL(url)};img.src=url}
-function salvarOS(e,id){e.preventDefault();let a=db.agenda.find(x=>x.id===id),f=getForm('fos');if(!a)return;let concluida=a.situacao==='concluido';if(!concluida&&a.tipo==='entrega'){let n=Number(f.n);if(status(n)!=='disponivel'){alert('Selecione uma caçamba disponível.');return}if(f.recebimento==='assinado'&&(!f.recebedor?.trim()||!assinaturaAlterada)){alert('Informe o nome de quem recebeu e colha a assinatura.');return}if(f.recebimento==='autorizado'&&!fotoTemporaria){alert('Entrega autorizada sem assinatura exige fotografia.');return}let ano=new Date().getFullYear();db.seq[ano]=(db.seq[ano]||0)+1;let os=String(db.seq[ano]).padStart(2,'0')+'/'+ano;a.os=os;a.situacao='concluido';a.assinaturaMotorista=db.colaboradores.find(c=>c.id===a.motoristaId)?.assinatura||'';a.assinaturaAjudante=db.colaboradores.find(c=>c.id===a.ajudanteId)?.assinatura||'';a.recebedor=f.recebedor;a.recebimento=f.recebimento;a.assinatura=f.recebimento==='assinado'?$('#assinaturaCanvas').toDataURL('image/png'):null;db.locacoes.push({id:uid(),n,clienteId:a.clienteId,endereco:a.endereco,entrega:today(),vencimento:addDays(today(),Number(a.prazo||f.prazo)),valor:a.valor||null,os,recebedor:f.recebedor,recebimento:f.recebimento,origem:'entrega',retirada:false,...(gpsTemporario||{})});log('OS '+os+' gerada na entrega da caçamba '+n)}else if(!concluida&&a.tipo==='retirada'){let l=db.locacoes.find(x=>x.id===a.locacaoId);if(!l||l.retirada){alert('Esta locação já foi encerrada ou não existe.');return}l.retirada=today();l.retiradaAgendada=null;l.retiradaConfirmadaEm=new Date().toISOString();a.situacao='concluido';log('Retirada confirmada pelo motorista: caçamba '+l.n+' — OS original '+(l.os||'implantação'));}else if(!concluida&&a.tipo==='troca'){let l=db.locacoes.find(x=>x.id===a.locacaoId),n=Number(f.nTroca);if(!l||l.retirada){alert('Locação original não encontrada ou encerrada.');return}if(!n||status(n)!=='disponivel'){alert('Selecione uma caçamba disponível para a troca.');return}let ano=new Date().getFullYear();db.seq[ano]=(db.seq[ano]||0)+1;let os=String(db.seq[ano]).padStart(2,'0')+'/'+ano;l.retirada=today();l.retiradaConfirmadaEm=new Date().toISOString();l.trocadaPor=n;a.os=os;a.situacao='concluido';a.assinaturaMotorista=db.colaboradores.find(c=>c.id===a.motoristaId)?.assinatura||'';a.assinaturaAjudante=db.colaboradores.find(c=>c.id===a.ajudanteId)?.assinatura||'';db.locacoes.push({id:uid(),n,clienteId:l.clienteId,endereco:l.endereco,entrega:today(),vencimento:addDays(today(),Number(f.prazoTroca)),os,origem:'troca',locacaoAnteriorId:l.id,retirada:false,...(gpsTemporario||{})});log('Troca confirmada: caçamba '+l.n+' por '+n+' — nova OS '+os)}a.observacoes ||= [];a.fotos ||= [];if(f.observacao?.trim())a.observacoes.push({data:new Date().toLocaleString('pt-BR'),texto:f.observacao.trim()});if(fotoTemporaria)a.fotos.push(fotoTemporaria);try{localStorage.setItem(KEY,JSON.stringify(db))}catch(err){alert('Armazenamento local cheio. Tente usar fotos menores ou exportar os dados.');return}closeModal();render();if(a.os&&!concluida)alert('Entrega confirmada. OS '+a.os+' gerada!')}
+function salvarOS(e,id){e.preventDefault()}
 function confirmar(id){abrirOS(id)}
 function novaLocacao(n){if(!db.clientes.length){alert('Cadastre primeiro o cliente e a obra.');navTo('clientes');return}let livres=db.cacambas.filter(c=>status(c.n)==='disponivel');modal(`<h2>Locação existente na implantação</h2><form id="fl" onsubmit="salvarLocacao(event)"><div class="formgrid">${select('Caçamba', 'n',livres.map(c=>[c.n,'Nº '+c.n]))}${select('Cliente','clienteId',optionsClientes())}${field('Endereço da obra','endereco','text','','required')}${field('Data original de entrega','entrega','date',today(),'required')}${select('Prazo','prazo',[[7,'7 dias'],[15,'15 dias'],[30,'30 dias']])}</div><div class="actions"><button class="primary">Registrar locação inicial</button>${btn('Cancelar','closeModal()')}</div></form>`);if(n)document.querySelector('#fl [name=n]').value=n}function salvarLocacao(e){e.preventDefault();let f=getForm('fl'),n=Number(f.n);if(status(n)!=='disponivel'){alert('Caçamba indisponível.');return}db.locacoes.push({...f,id:uid(),n,vencimento:addDays(f.entrega,Number(f.prazo)),origem:'implantacao',retirada:false});log('Locação inicial cadastrada para caçamba '+n);closeModal();save()}
 function agendarTroca(id){agendarRetirada(id,'troca')}
@@ -166,7 +243,7 @@ function agendarRetirada(id,tipo='retirada'){
  modal(`<h2>Agendar e enviar ${tipo==='troca'?'troca':'retirada'}</h2><p><b>Caçamba nº ${l.n}</b> — ${esc(cliente(l.clienteId)?.nome||'Cliente')}<br>${esc(l.endereco)}</p><form id="fret" onsubmit="salvarAgendamentoRetirada(event,'${id}','${tipo}')"><div class="formgrid">${field('Data da retirada','data','date',today(),'required')}${field('Horário ou período','hora','text','','placeholder="Ex.: 14:00 ou tarde" required')}${select('Equipe responsável','equipeId',equipes.map(t=>[t.id,t.nome+' — '+nomeCol(t.motoristaId)+' / '+nomeCol(t.ajudanteId)]))}${select('Veículo','veiculoId',[['','A definir'],...db.veiculos.filter(v=>v.ativo!==false).map(v=>[v.id,v.identificacao])])}</div><label>Instruções para o motorista</label><textarea name="instrucoes" rows="3" placeholder="Orientações de acesso e retirada"></textarea><div class="actions"><button class="primary">Agendar e enviar para a equipe</button>${btn('Cancelar','closeModal()')}</div></form>`)
 }
 function salvarAgendamentoRetirada(e,id,tipo='retirada'){e.preventDefault();let l=db.locacoes.find(x=>x.id===id),f=getForm('fret'),t=db.equipes.find(x=>x.id===f.equipeId);if(!l||l.retirada||!t||!t.motoristaId||!t.ajudanteId){alert('Verifique a locação e a equipe.');return}let data=f.data;if(!/^\d{4}-\d{2}-\d{2}$/.test(data)||!f.hora?.trim()){alert('Informe data e horário ou período.');return}let a={id:uid(),tipo,clienteId:l.clienteId,endereco:l.endereco,data,hora:f.hora,prioridade:'Normal',instrucoes:(tipo==='troca'?'Trocar':'Retirar')+' caçamba nº '+l.n+(f.instrucoes?' — '+f.instrucoes:''),situacao:'encaminhado',equipeId:t.id,motoristaId:t.motoristaId,ajudanteId:t.ajudanteId,motorista:nomeCol(t.motoristaId),auxiliar:nomeCol(t.ajudanteId),veiculoId:f.veiculoId,caminhao:db.veiculos.find(v=>v.id===f.veiculoId)?.identificacao||'',locacaoId:id,tentativas:[]};l.retiradaAgendada=data;db.agenda.push(a);log((tipo==='troca'?'Troca':'Retirada')+' da caçamba '+l.n+' encaminhada à equipe '+t.nome);closeModal();save()}
-let buscaOS='',situacaoOS='todas';
+let buscaOS='',tipoBuscaOS='os',situacaoOS='todas';
 let relCliente='',relEndereco='';
 function relatorioLocacoes(){
  const clientes=db.clientes.slice().sort((a,b)=>String(a.nome).localeCompare(String(b.nome),'pt-BR'));
@@ -180,19 +257,39 @@ function abrirRelatorioLocacoes(){
  const c=db.clientes.find(x=>x.id===relCliente);
  const linhas=registros.map(l=>`<tr><td>${esc(l.os||'Sem OS (implantação)')}</td><td>${esc(cliente(l.clienteId)?.nome||'—')}</td><td>${esc(l.endereco||'—')}</td><td>${esc(l.n)}</td><td>${esc(l.entrega||'—')}</td><td>${esc(l.vencimento||'—')}</td><td>${esc(l.retirada||'Em locação')}</td></tr>`).join('');
  const titulo=`Locações ${c?'— '+c.nome:'— Todos os clientes'}${relEndereco?' — '+relEndereco:''}`;
- const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>${esc(titulo)}</title><style>body{font:14px Arial,sans-serif;padding:28px;color:#17243a}h1{font-size:21px}table{width:100%;border-collapse:collapse;font-size:11px}th,td{border:1px solid #ccd3df;padding:7px;text-align:left}th{background:#eaf0f7}button{padding:10px 16px;margin:12px 0}@media print{button{display:none}body{padding:0}}</style></head><body><h1>${esc(db.config?.nome||'BIG NORTE')} — Relatório de locações</h1><p><b>Cliente:</b> ${esc(c?.nome||'Todos')}<br><b>Obra/endereço:</b> ${esc(relEndereco||'Todos os endereços')}<br><b>Total:</b> ${registros.length} locação(ões)</p><button onclick="window.print()">Imprimir / Salvar em PDF</button><table><thead><tr><th>OS</th><th>Cliente</th><th>Endereço</th><th>Caçamba</th><th>Entrega</th><th>Vencimento</th><th>Retirada</th></tr></thead><tbody>${linhas||'<tr><td colspan="7">Nenhuma locação encontrada.</td></tr>'}</tbody></table></body></html>`;
+ const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>${esc(titulo)}</title><style>body{font:14px Arial,sans-serif;padding:28px;color:#17243a}h1{font-size:21px}table{width:100%;border-collapse:collapse;font-size:11px}th,td{border:1px solid #ccd3df;padding:7px;text-align:left}th{background:#eaf0f7}button{padding:10px 16px;margin:12px 0}@media print{button{display:none}body{padding:0}}</style></head><body><h1>${esc(db.config?.nome||'BIG NORTE')} — Relatório de locações</h1><p><b>Cliente:</b> ${esc(c?.nome||'Todos')}<br><b>Obra/endereço:</b> ${esc(relEndereco||'Todos os endereços')}<br><b>Total:</b> ${registros.length} locação(ões)</p><button onclick="window.print()">Imprimir / Salvar em PDF</button><table><thead><tr><th>OS</th><th>Cliente</th><th>Endereço</th><th>Caçamba</th><th>Entrega</th><th>Vencimento</th><th>Retirada</th></tr></thead><tbody>${linhas||'<tr><td colspan="7">Nenhuma locação encontrada.</td></tr>'}</tbody></table><\/body><\/html>`;
  const w=window.open('','_blank');if(!w){alert('Permita a abertura de janelas para visualizar o relatório.');return}w.document.open();w.document.write(html);w.document.close();
 }
 function normalizarEnderecoOS(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').replace(/[,.;]+/g,'').trim()}
-function ordens(){let os=db.agenda.filter(a=>a.os).slice().reverse().filter(a=>{let l=db.locacoes.find(x=>x.os===a.os);let q=(a.os+' '+(cliente(a.clienteId)?.nome||'')+' '+a.endereco+' '+(l?.n||'')).toLowerCase();return q.includes(buscaOS.toLowerCase())&&(situacaoOS==='todas'||(situacaoOS==='ativas'?!l?.retirada:!!l?.retirada))});return `<div class="panel"><h2>Ordens de Serviço geradas</h2><p class="muted">Consulte cada OS individualmente. Para reunir todas as locações de uma construtora ou de uma obra, utilize o relatório abaixo.</p><div class="formgrid"><div><label>Pesquisar por OS, cliente, endereço ou número da caçamba</label><input id="buscaOS" placeholder="Ex.: 01/2026 ou caçamba 25" value="${esc(buscaOS)}" oninput="buscaOS=this.value;render();document.getElementById('buscaOS')?.focus()"></div><div><label>Situação da locação</label><select onchange="situacaoOS=this.value;render()"><option value="todas" ${situacaoOS==='todas'?'selected':''}>Todas</option><option value="ativas" ${situacaoOS==='ativas'?'selected':''}>Ativas</option><option value="encerradas" ${situacaoOS==='encerradas'?'selected':''}>Encerradas</option></select></div></div><p class="muted">${os.length} ordem(ns) encontrada(s)</p>${os.map(a=>{let l=db.locacoes.find(x=>x.os===a.os);return `<div class="item"><div class="row"><b>OS ${esc(a.os)} • Caçamba ${esc(l?.n||'—')}</b><span class="pill">${l?.retirada?'Encerrada':'Em locação'}</span></div><div>${esc(cliente(a.clienteId)?.nome||'Cliente não encontrado')} • ${esc(a.endereco)}</div><div class="muted">Entrega: ${esc(l?.entrega||'—')} • Vencimento: ${esc(l?.vencimento||'—')} • Motorista: ${esc(a.motorista||'—')}</div><div class="actions">${btn('Visualizar OS',`visualizarOS('${a.id}')`,'primary')}${btn('Baixar PDF',`pdfOS('${a.id}')`)}${btn('Solicitar avaliação',`solicitarAvaliacao('${a.id}')`)}</div></div>`}).join('')||'<div class="empty">Nenhuma OS oficial encontrada.</div>'}</div>${relatorioLocacoes()}`}
+function ordens(){
+ const termo=buscaOS.trim().toLocaleLowerCase('pt-BR');
+ const os=db.agenda.filter(a=>a.os).slice().reverse().filter(a=>{
+  const l=db.locacoes.find(x=>x.os===a.os);
+  const campos={os:String(a.os||''),cliente:String(cliente(a.clienteId)?.nome||''),endereco:String(a.endereco||''),cacamba:String(l?.n??'')};
+  const valor=(campos[tipoBuscaOS]||'').toLocaleLowerCase('pt-BR');
+  const corresponde=tipoBuscaOS==='cacamba' ? (!termo || valor.replace(/^0+/,'')===termo.replace(/^0+/,'')) : valor.includes(termo);
+  return corresponde&&(situacaoOS==='todas'||(situacaoOS==='ativas'?!l?.retirada:!!l?.retirada));
+ });
+ const opcoes=[['os','Número da OS'],['cliente','Cliente'],['endereco','Endereço'],['cacamba','Número da caçamba']];
+ const seletor=opcoes.map(([v,t])=>`<option value="${v}" ${tipoBuscaOS===v?'selected':''}>${t}</option>`).join('');
+ const dica={os:'Ex.: 01/2026',cliente:'Digite o nome do cliente',endereco:'Digite o endereço',cacamba:'Ex.: 025'}[tipoBuscaOS];
+ return `<div class="panel"><h2>Ordens de Serviço geradas</h2><p class="muted">Consulte cada OS individualmente. Para reunir todas as locações de uma construtora ou de uma obra, utilize o relatório abaixo.</p><div class="formgrid"><div><label for="tipoBuscaOS">Pesquisar por</label><select id="tipoBuscaOS" onchange="tipoBuscaOS=this.value;buscaOS='';render()">${seletor}</select></div><div><label for="buscaOS">Digite sua pesquisa</label><input id="buscaOS" type="search" dir="ltr" autocomplete="off" placeholder="${esc(dica)}" value="${esc(buscaOS)}" oninput="filtrarOrdensSemPerderCursor(this)"></div><div><label>Situação da locação</label><select onchange="situacaoOS=this.value;render()"><option value="todas" ${situacaoOS==='todas'?'selected':''}>Todas</option><option value="ativas" ${situacaoOS==='ativas'?'selected':''}>Ativas</option><option value="encerradas" ${situacaoOS==='encerradas'?'selected':''}>Encerradas</option></select></div></div><p class="muted">${os.length} ordem(ns) encontrada(s)</p><div id="resultadosOS">${os.map(a=>{let l=db.locacoes.find(x=>x.os===a.os);return `<div class="item"><div class="row"><b>OS ${esc(a.os)} • Caçamba ${esc(l?.n||'—')}</b><span class="pill">${l?.retirada?'Encerrada':'Em locação'}</span></div><div>${esc(cliente(a.clienteId)?.nome||'Cliente não encontrado')} • ${esc(a.endereco)}</div><div class="muted">Entrega: ${esc(l?.entrega||'—')} • Vencimento: ${esc(l?.vencimento||'—')} • Motorista: ${esc(a.motorista||'—')}</div><div class="actions">${btn('Visualizar OS',`visualizarOS('${a.id}')`,'primary')}${btn('Baixar PDF',`pdfOS('${a.id}')`)}${btn('Solicitar avaliação',`solicitarAvaliacao('${a.id}')`)}</div></div>`}).join('')||'<div class="empty">Nenhuma OS oficial encontrada.</div>'}</div></div>${relatorioLocacoes()}`;
+}
+function filtrarOrdensSemPerderCursor(input){
+ buscaOS=input.value;
+ const inicio=input.selectionStart,fim=input.selectionEnd;
+ render();
+ const novo=document.getElementById('buscaOS');
+ if(novo){novo.focus({preventScroll:true});try{novo.setSelectionRange(inicio,fim)}catch{}}
+}
 
 function visualizarOS(id){let a=db.agenda.find(x=>x.id===id&&x.os);if(!a)return;let l=db.locacoes.find(x=>x.os===a.os);modal(`<h2>Ordem de Serviço ${esc(a.os)}</h2><div class="os-detail"><b>Cliente:</b> ${esc(cliente(a.clienteId)?.nome||'—')}<br><b>Endereço:</b> ${esc(a.endereco)}<br><b>Caçamba:</b> ${esc(l?.n||'—')}<br><b>Motorista:</b> ${esc(a.motorista||'—')}<br><b>Ajudante:</b> ${esc(a.auxiliar||'—')}<br><b>Veículo:</b> ${esc(a.caminhao||'—')}<br><b>Entrega:</b> ${esc(l?.entrega||'—')}<br><b>Vencimento:</b> ${esc(l?.vencimento||'—')}<br><b>Retirada:</b> ${esc(l?.retirada||'Não realizada')}<br><b>Recebedor:</b> ${esc(a.recebedor||'—')}<br><b>Comprovação:</b> ${esc(a.recebimento==='autorizado'?'Autorizada sem assinatura':'Assinatura do recebedor')}</div>${a.observacoes?.length?`<h3>Observações</h3>${a.observacoes.map(o=>`<div class="item">${esc(o.data)} — ${esc(o.texto)}</div>`).join('')}`:''}${a.fotos?.length?`<h3>Fotografias</h3><div class="row" style="flex-wrap:wrap">${a.fotos.map(f=>`<img class="photo-preview" src="${f}" alt="Foto da OS">`).join('')}</div>`:''}<h3>Assinaturas da OS</h3>${assinaturasDaOS(a).map(s=>`<div class="item"><b>${esc(s.rotulo)}</b><div>${s.imagem?`<img class="photo-preview" src="${s.imagem}" alt="Assinatura">`:'<span class="muted">Assinatura não cadastrada ou não coletada</span>'}</div></div>`).join('')}<div class="actions">${btn('Baixar PDF',`pdfOS('${a.id}')`)}${btn('Solicitar avaliação',`solicitarAvaliacao('${a.id}')`)}${btn('Fechar','closeModal()')}</div>`)}
 function locacoes(){return `<div class="panel"><div class="row"><h2>Locações</h2>${btn('+ Registrar locação inicial','novaLocacao()','primary')}</div>${db.locacoes.slice().reverse().map(l=>`<div class="item"><div class="row"><b>Caçamba ${l.n} • ${esc(l.os||'Implantação')}</b><span class="pill">${l.retirada?'Encerrada':types[status(l.n)][0]}</span></div><div>${esc(cliente(l.clienteId)?.nome)} • ${esc(l.endereco)}</div><div class="muted">Entrega ${esc(l.entrega)} • Vencimento ${esc(l.vencimento)}</div><div class="actions">${!l.retirada?btn('Agendar retirada',`agendarRetirada('${l.id}')`):''}${!l.retirada?btn('Renovar',`renovar('${l.id}')`):''}</div></div>`).join('')||'<div class="empty">Ainda não existem locações.</div>'}</div>`}function renovar(id){let l=db.locacoes.find(x=>x.id===id),dias=Number(prompt('Novo prazo em dias (7, 15 ou 30):','7'));if(![7,15,30].includes(dias))return;let inicio=prompt('Início da renovação (AAAA-MM-DD):',l.vencimento);if(!/^\d{4}-\d{2}-\d{2}$/.test(inicio))return;l.vencimento=addDays(inicio,dias);l.retiradaAgendada=null;log('Renovação da caçamba '+l.n+' por '+dias+' dias');save()}function whats(id){let l=db.locacoes.find(x=>x.id===id),c=cliente(l.clienteId);let msg=`Olá! A BIG NORTE informa que o prazo de locação da caçamba nº ${l.n}, em ${l.endereco}, vence em ${l.vencimento}. Entre em contato para combinar a retirada ou renovação.`;let phone=(c?.telefone||'').replace(/\D/g,'');if(phone.length===11||phone.length===10)phone='55'+phone;if(!phone){alert('Cliente sem telefone cadastrado.');return}window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank','noopener')}
-function aplicarIdentidade(){const c=db.config||{};document.documentElement.style.setProperty('--bn-primary',c.corPrincipal||'#1767c1');document.documentElement.style.setProperty('--bn-header',c.corCabecalho||'#102b49');let nome=document.getElementById('nomeCabecalho');if(nome)nome.textContent=c.nome||'BIG NORTE';let logo=document.getElementById('logoCabecalho');if(logo){if(c.logo){logo.src=c.logo;logo.style.display='block'}else{logo.removeAttribute('src');logo.style.display='none'}}document.title=(c.nome||'BIG NORTE')+' | Gestão de Caçambas'}
+function aplicarIdentidade(){const c=db.config||{};document.documentElement.style.setProperty('--bn-primary',c.corPrincipal||'#1767c1');document.documentElement.style.setProperty('--bn-header',c.corCabecalho||'#102b49');let nome=document.getElementById('nomeCabecalho');if(nome)nome.textContent=c.nome||'BIG NORTE - GESTÃO DE CAÇAMBAS';let logo=document.getElementById('logoCabecalho');if(logo){if(c.logo){logo.src=c.logo;logo.style.display='block'}else{logo.removeAttribute('src');logo.style.display='none'}}document.title=(c.nome||'BIG NORTE - GESTÃO DE CAÇAMBAS')+' | Gestão de Caçambas'}
 function configuracoes(){let c=db.config;return `<div class="panel"><h2>⚙ Configurações da empresa</h2><p class="muted">Personalize os dados da empresa, a logomarca e as cores do sistema. As alterações ficam salvas neste navegador.</p><form id="fconfig" onsubmit="salvarConfiguracoes(event)"><h3>Identificação e contato</h3><div class="formgrid">${field('Nome fantasia','nome','text',c.nome,'required')}${field('Razão social','razao','text',c.razao)}${field('CNPJ','cnpj','text',c.cnpj)}${field('Telefone','telefone','tel',c.telefone)}${field('WhatsApp','whatsapp','tel',c.whatsapp)}${field('E-mail','email','email',c.email)}${field('Endereço','endereco','text',c.endereco)}${field('Bairro','bairro','text',c.bairro)}${field('Cidade','cidade','text',c.cidade)}${field('UF','uf','text',c.uf,'maxlength="2"')}${field('CEP','cep','text',c.cep)}${field('Link de avaliação no Google','linkAvaliacao','url',c.linkAvaliacao||'')}</div><h3>Assinatura da responsável pela empresa</h3><p class="muted">Será inserida nos PDFs de orçamentos e recibos.</p><div class="formgrid">${field('Nome da responsável','responsavelNome','text',c.responsavelNome||'')}${field('Cargo da responsável','responsavelCargo','text',c.responsavelCargo||'')}<div><label>Enviar arquivo da assinatura (PNG ou JPG)</label><input type="file" id="arquivoAssinaturaResponsavel" accept="image/png,image/jpeg" onchange="carregarAssinaturaResponsavel(this)"><img id="previewAssinaturaResponsavel" alt="Assinatura da responsável" src="${c.assinaturaResponsavel||''}" style="${c.assinaturaResponsavel?'':'display:none;'}max-width:240px;max-height:110px;object-fit:contain"><button type="button" onclick="removerAssinaturaResponsavel()">Remover assinatura</button></div></div><h3>Identidade visual</h3><div class="formgrid"><div><label>Logo da empresa (PNG, JPG ou WebP)</label><input type="file" id="arquivoLogo" accept="image/png,image/jpeg,image/webp" onchange="visualizarLogo(this)"><p class="muted">Prefira uma imagem pequena. O arquivo será armazenado apenas neste navegador.</p><img id="previewLogo" src="${c.logo||''}" alt="Prévia da logo" style="${c.logo?'':'display:none;'}max-width:160px;max-height:110px;object-fit:contain;border:1px solid #ddd;border-radius:8px;padding:8px"></div><div>${field('Cor principal','corPrincipal','color',c.corPrincipal||'#1767c1')}</div><div>${field('Cor do cabeçalho','corCabecalho','color',c.corCabecalho||'#102b49')}</div></div><div class="actions"><button class="primary" type="submit">Salvar configurações</button><button type="button" onclick="removerLogo()">Remover logo</button></div></form></div>`}
 let novaAssinaturaResponsavel=null;function carregarAssinaturaResponsavel(input){let file=input.files?.[0];if(!file)return;if(!['image/png','image/jpeg'].includes(file.type)||file.size>500000){alert('Envie assinatura em PNG ou JPG de até 500 KB.');input.value='';return}let r=new FileReader();r.onload=()=>{novaAssinaturaResponsavel=r.result;let img=document.getElementById('previewAssinaturaResponsavel');if(img){img.src=r.result;img.style.display='block'}};r.readAsDataURL(file)}function removerAssinaturaResponsavel(){novaAssinaturaResponsavel='';let img=document.getElementById('previewAssinaturaResponsavel');if(img){img.removeAttribute('src');img.style.display='none'}let input=document.getElementById('arquivoAssinaturaResponsavel');if(input)input.value=''}let novaLogo=null;function visualizarLogo(input){let file=input.files?.[0];if(!file)return;if(!['image/png','image/jpeg','image/webp'].includes(file.type)){alert('Use uma imagem PNG, JPG ou WebP.');input.value='';return}if(file.size>800000){alert('Escolha uma imagem de até 800 KB para evitar lotar o armazenamento local.');input.value='';return}let r=new FileReader();r.onload=()=>{novaLogo=r.result;let img=document.getElementById('previewLogo');img.src=novaLogo;img.style.display='block'};r.readAsDataURL(file)}
 function removerLogo(){novaLogo='';let img=document.getElementById('previewLogo');if(img){img.removeAttribute('src');img.style.display='none'}let f=document.getElementById('arquivoLogo');if(f)f.value=''}
-function salvarConfiguracoes(e){e.preventDefault();let f=getForm('fconfig');let anterior={...db.config};db.config={...anterior,...f,nome:(f.nome||'').trim()||'BIG NORTE',uf:(f.uf||'').trim().toUpperCase()};if(novaLogo!==null)db.config.logo=novaLogo;if(novaAssinaturaResponsavel!==null)db.config.assinaturaResponsavel=novaAssinaturaResponsavel;try{localStorage.setItem(KEY,JSON.stringify(db));novaLogo=null;novaAssinaturaResponsavel=null;render();alert('Configurações salvas com sucesso.')}catch(err){db.config=anterior;alert('Não foi possível salvar. O armazenamento do navegador pode estar cheio. Tente uma logo menor.')}}
+function salvarConfiguracoes(e){e.preventDefault();let f=getForm('fconfig');let anterior={...db.config};db.config={...anterior,...f,nome:(f.nome||'').trim()||'BIG NORTE - GESTÃO DE CAÇAMBAS',uf:(f.uf||'').trim().toUpperCase()};if(novaLogo!==null)db.config.logo=novaLogo;if(novaAssinaturaResponsavel!==null)db.config.assinaturaResponsavel=novaAssinaturaResponsavel;try{localStorage.setItem(KEY,JSON.stringify(db));novaLogo=null;novaAssinaturaResponsavel=null;render();alert('Configurações salvas com sucesso.')}catch(err){db.config=anterior;alert('Não foi possível salvar. O armazenamento do navegador pode estar cheio. Tente uma logo menor.')}}
 function relatorios(){let ativos=db.locacoes.filter(l=>!l.retirada).length;return `<div class="panel"><h2>Resumo operacional</h2><div class="stats"><div class="stat">Agendamentos<b>${db.agenda.length}</b></div><div class="stat">Locações ativas<b>${ativos}</b></div><div class="stat">Entregas confirmadas<b>${db.locacoes.filter(l=>l.os).length}</b></div><div class="stat">Não executadas<b>${db.agenda.filter(a=>a.situacao==='nao_executada').length}</b></div></div><h3>Documentos</h3><div class="actions">${btn('+ Novo orçamento','novoOrcamento()','primary')}${btn('Recibo de OS concluída','novoReciboOS()')}${btn('Recibo avulso','novoReciboAvulso()')}</div><h3>Orçamentos</h3>${(db.orcamentos||[]).slice().reverse().map(o=>`<div class="item"><b>Orçamento ${esc(o.numero)} — ${esc(o.clienteNome)}</b> <span class="pill">${esc(o.situacao)}</span><div>${esc(o.descricao)} • R$ ${esc(o.valor)}</div><div class="actions">${btn('Baixar PDF',`pdfOrcamento('${o.id}')`)}${o.situacao==='Pendente'?btn('Aprovar e agendar',`aprovarOrcamento('${o.id}')`,'primary'):''}${o.situacao==='Pendente'?btn('Rejeitar',`rejeitarOrcamento('${o.id}')`):''}</div></div>`).join('')||'<p class="muted">Nenhum orçamento registrado.</p>'}<h3>Recibos emitidos</h3>${(db.recibos||[]).slice().reverse().map(r=>`<div class="item"><b>Recibo ${esc(r.numero)} — ${esc(r.nome)}</b><div class="actions">${btn('Baixar PDF',`pdfRecibo('${r.id}')`)}</div></div>`).join('')||'<p class="muted">Nenhum recibo emitido.</p>'}<h3>Histórico recente</h3>${db.historico.slice(0,30).map(h=>`<div class="item"><span class="muted">${esc(h.at)}</span> — ${esc(h.msg)}</div>`).join('')||'<div class="empty">Nenhuma movimentação.</div>'}<div class="actions">${btn('Exportar dados demonstrativos (JSON)','exportar()')}${btn('Reiniciar demonstração','resetar()','danger')}</div></div>`}function exportar(){let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='big-norte-cacambas-demo.json';a.click();URL.revokeObjectURL(url)}function resetar(){if(confirm('Apagar TODOS os dados demonstrativos deste navegador?')){db=initial();save()}}
 function iniciarAssinaturaCol(){const c=document.getElementById('assinaturaColCanvas');if(!c)return;c.width=Math.max(300,c.clientWidth)*devicePixelRatio;c.height=170*devicePixelRatio;let ctx=c.getContext('2d');ctx.scale(devicePixelRatio,devicePixelRatio);ctx.strokeStyle='#172b48';ctx.lineWidth=2;ctx.lineCap='round';let ativo=false;const pos=e=>{let r=c.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]};c.onpointerdown=e=>{ativo=true;c.setPointerCapture(e.pointerId);let [x,y]=pos(e);ctx.beginPath();ctx.moveTo(x,y)};c.onpointermove=e=>{if(!ativo)return;let [x,y]=pos(e);ctx.lineTo(x,y);ctx.stroke();assinaturaColDesenhada=true;assinaturaColNova=null};c.onpointerup=()=>ativo=false;c.onpointercancel=()=>ativo=false}
 function limparAssinaturaCol(){let c=document.getElementById('assinaturaColCanvas');if(c)c.getContext('2d').clearRect(0,0,c.width,c.height);assinaturaColNova='';assinaturaColDesenhada=false;let img=document.getElementById('assinaturaColPreview');if(img)img.style.display='none'}
@@ -226,7 +323,7 @@ async function verificarSessao(){
   document.getElementById('btnSair').style.display='inline-block';
   document.getElementById('btnCriarUsuario').style.display=perfil.perfil==='administrador'?'inline-block':'none';
   document.getElementById('loginTela').style.display='none';
-  try{await carregarColaboradoresSupabase()}catch(err){console.error(err);alert(err.message)}
+  try{await carregarColaboradoresSupabase();await carregarEquipesVeiculosSupabase()}catch(err){console.error(err);alert("Falha ao carregar cadastros do Supabase: "+err.message)}
   render();
 }
 function bloquearSistema(msg=''){
@@ -333,5 +430,408 @@ setInterval(async()=>{
  }catch(e){console.warn('Falha temporária ao revalidar acesso',e)}
 },30000);
 supa.auth.onAuthStateChange((event)=>{if(event==='SIGNED_OUT')bloquearSistema()});
+// Inicialização após os módulos.
+
+// ETAPA 11 - Diagnostico SOMENTE LEITURA. Nao sincroniza nem altera registros.
+async function consultarAgendaSupabaseEtapa11(){
+  if(!usuarioAutenticado || !['admin','administrativo'].includes(usuarioAutenticado.perfil)){
+    alert('Consulta de diagnostico disponivel apenas ao administrador/administrativo.');return;
+  }
+  try {
+    const {data,error}=await supa.from('agenda')
+      .select('id,cliente_id,obra_id,tipo,programado_para,status,origem,observacoes,criado_em')
+      .order('programado_para',{ascending:false}).limit(30);
+    if(error) throw error;
+    const linhas=(data||[]).map(a=>`<tr><td>${esc(a.tipo)}</td><td>${esc(a.programado_para)}</td><td>${esc(a.status)}</td><td>${esc(a.cliente_id)}</td></tr>`).join('');
+    modal(`<h2>Agenda no Supabase — somente leitura</h2><p class="muted">${(data||[]).length} registro(s) retornado(s), limite de 30. Esta consulta nao importa dados locais e nao grava no banco.</p><div style="overflow:auto"><table><thead><tr><th>Tipo</th><th>Programado</th><th>Status</th><th>Cliente (UUID)</th></tr></thead><tbody>${linhas||'<tr><td colspan="4">Nenhum agendamento acessivel.</td></tr>'}</tbody></table></div><div class="actions"><button type="button" onclick="closeModal()">Fechar</button></div>`);
+  }catch(e){alert('Falha na consulta da Agenda: '+(e.message||String(e)));}
+}
+</script>
+<script>
+/* BIG NORTE — Etapa 15. Módulo de integração PREPARATÓRIO.
+ * NÃO PUBLICAR / NÃO EXECUTAR NO SISTEMA ATUAL.
+ * Requer cliente Supabase autenticado e RLS já configurada.
+ * Não importa dados locais nem cria caçambas, locações ou OS.
+ * Não substitui salvarAgenda() até validação da migração e das permissões.
+ */
+(function (global) {
+  'use strict';
+  const TIPOS = new Set(['entrega', 'retirada', 'troca', 'visita']);
+  const STATUS = new Set(['pendente', 'confirmado', 'concluido', 'cancelado']);
+  const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+  function required(s, campo) {
+    if (typeof s !== 'string' || !s.trim()) throw new Error('Informe ' + campo + '.');
+    return s.trim();
+  }
+  function validUuid(id, campo) {
+    if (!UUID.test(id || '')) throw new Error(campo + ' deve ser UUID do Supabase, não ID local.');
+    return id;
+  }
+  function assertDb(supa) {
+    if (!supa || typeof supa.from !== 'function') throw new Error('Cliente Supabase não fornecido.');
+  }
+  async function one(query, acao) {
+    const {data, error} = await query;
+    if (error) throw new Error(acao + ': ' + error.message);
+    if (!data) throw new Error(acao + ': nenhum registro retornado.');
+    return data;
+  }
+  async function criarCliente(supa, entrada) {
+    assertDb(supa);
+    const tipo = entrada.tipo || 'PF';
+    if (!['PF','PJ'].includes(tipo)) throw new Error('Tipo de cliente deve ser PF ou PJ. Empreiteiro não é tipo aceito.');
+    const payload = {nome:required(entrada.nome,'nome do cliente'),tipo};
+    for (const k of ['documento','telefone','email','endereco','bairro','cidade','uf','cep']) {
+      if (entrada[k] != null && entrada[k] !== '') payload[k] = String(entrada[k]).trim();
+    }
+    return one(supa.from('clientes').insert(payload).select('id,nome,tipo').single(), 'Criar cliente');
+  }
+  async function criarObra(supa, entrada) {
+    assertDb(supa);
+    const payload = {
+      cliente_id:validUuid(entrada.cliente_id,'cliente_id'),
+      nome:required(entrada.nome,'nome da obra'),
+      endereco:required(entrada.endereco,'endereço da obra')
+    };
+    for (const k of ['bairro','cidade','uf','cep','observacoes']) {
+      if (entrada[k] != null && entrada[k] !== '') payload[k] = String(entrada[k]).trim();
+    }
+    return one(supa.from('obras').insert(payload).select('id,cliente_id,nome,endereco').single(), 'Criar obra');
+  }
+  async function criarAgendamento(supa, entrada) {
+    assertDb(supa);
+    validUuid(entrada.cliente_id,'cliente_id');
+    if (!TIPOS.has(entrada.tipo)) throw new Error('Tipo de serviço inválido.');
+    if (!entrada.programado_para || !Number.isFinite(Date.parse(entrada.programado_para))) {
+      throw new Error('Data/hora inválida: enviar timestamp ISO com fuso horário explícito.');
+    }
+    if (!/(Z|[+-]\d\d:\d\d)$/i.test(entrada.programado_para)) {
+      throw new Error('Data/hora precisa informar fuso horário.');
+    }
+    const status = entrada.status || 'pendente';
+    if (!STATUS.has(status)) throw new Error('Status inválido: encaminhado não existe no banco.');
+    const payload = {
+      cliente_id:entrada.cliente_id, tipo:entrada.tipo,
+      programado_para:entrada.programado_para, status
+    };
+    if (entrada.obra_id) payload.obra_id = validUuid(entrada.obra_id,'obra_id');
+    if (entrada.origem) payload.origem = String(entrada.origem).trim();
+    if (entrada.observacoes) payload.observacoes = String(entrada.observacoes).trim();
+    // equipe_id e veiculo_id só após a migração de esquema e revisão RLS.
+    return one(supa.from('agenda').insert(payload).select('id,cliente_id,obra_id,tipo,programado_para,status').single(), 'Criar agendamento');
+  }
+  async function consultarAgenda(supa, limite=30) {
+    assertDb(supa);
+    const n = Math.min(100, Math.max(1, Number(limite)||30));
+    const {data,error} = await supa.from('agenda')
+      .select('id,cliente_id,obra_id,tipo,programado_para,status,observacoes')
+      .order('programado_para',{ascending:true}).limit(n);
+    if (error) throw new Error('Consultar agenda: ' + error.message);
+    return data || [];
+  }
+  // ATENÇÃO: são operações independentes; não há transação entre cliente/obra/agenda.
+  // Em produção, usar fluxo idempotente/RPC transacional e evitar duplicações.
+  global.BigNorteEtapa15 = Object.freeze({criarCliente,criarObra,criarAgendamento,consultarAgenda});
+})(typeof window !== 'undefined' ? window : globalThis);
+
+// Etapa 16: módulo disponível para integração futura, sem gravação automática.
+// Verificação em modo leitura: somente com sessão autenticada e acionamento explícito.
+window.verificarModuloEtapa16 = async function(){
+  try {
+    if (!window.BigNorteEtapa15) throw new Error('Módulo não carregado');
+    if (typeof supa === 'undefined') throw new Error('Supabase não inicializado');
+    const {data:{session},error} = await supa.auth.getSession();
+    if (error) throw error;
+    if (!session) throw new Error('Faça login primeiro');
+    const rows = await window.BigNorteEtapa15.consultarAgenda(supa,5);
+    alert('Consulta somente leitura concluída. Agendamentos retornados: '+rows.length+' (limite 5). Nenhum dado foi alterado.');
+  } catch(e) { alert('Etapa 16: '+e.message); }
+};
+
+// ETAPA 22: ponte de confirmacao Supabase. NAO publica nem altera banco so por carregar.
+// Somente tarefas reais do Supabase, identificadas por UUID, podem usar esta funcao.
+window.BigNorteConfirmacaoRemota = Object.freeze({
+  async confirmarEntrega({agendaId,cacambaId,prazoDias,comprovante={}}) {
+    const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    if(!uuid.test(String(agendaId))||!uuid.test(String(cacambaId)))
+      throw new Error('Agenda e caçamba devem ser registros reais do Supabase (UUID).');
+    if(![7,15,30].includes(Number(prazoDias))) throw new Error('Prazo inválido.');
+    if(!comprovante||Array.isArray(comprovante)||typeof comprovante!=='object')
+      throw new Error('Comprovante inválido.');
+    if(JSON.stringify(comprovante).length>12000)
+      throw new Error('Comprovante muito grande. Fotos e assinaturas exigem Storage.');
+    if(typeof supa==='undefined') throw new Error('Supabase indisponível.');
+    const {data:{user},error:authError}=await supa.auth.getUser();
+    if(authError||!user) throw new Error('Faça login para confirmar a entrega.');
+    const {data,error}=await supa.rpc('bn_confirmar_entrega',{
+      p_agenda_id:agendaId,p_cacamba_id:cacambaId,
+      p_prazo_dias:Number(prazoDias),p_comprovante:comprovante
+    });
+    if(error) throw new Error('Confirmação não concluída: '+error.message);
+    if(!data||typeof data.numero_os!=='string'||!data.os_id)
+      throw new Error('Resposta incompleta do servidor. Consulte a OS antes de repetir.');
+    return Object.freeze({osId:data.os_id,numeroOS:data.numero_os,
+      locacaoId:data.locacao_id,jaConfirmada:data.ja_confirmada===true});
+  }
+});
+
+// ETAPA 23 — consulta remota somente leitura, sujeita a RLS do Supabase.
+// Requer migracao de agenda.equipe_id e policy de SELECT para motorista, ainda NAO executadas.
+window.bnConsultarTarefasRemotas=async function(){
+  const target=document.getElementById('bn-tarefas-remotas');
+  if(!target)return;
+  target.textContent='Consultando tarefas autorizadas...';
+  try{
+    if(usuarioAutenticado?.perfil!=='motorista')throw new Error('Acesso exclusivo do motorista.');
+    const {data:{user},error:authError}=await supa.auth.getUser();
+    if(authError||!user)throw new Error('Sessão não autenticada.');
+    const {data,error}=await supa.rpc('bn_minhas_tarefas');
+    if(error)throw error;
+    if(!document.getElementById('bn-tarefas-remotas'))return;
+    target.replaceChildren();
+    if(!data?.length){target.textContent='Nenhuma tarefa encaminhada disponível para sua equipe.';return;}
+    for(const item of data){
+      const div=document.createElement('div');div.className='item';
+      const heading=document.createElement('b');heading.textContent=String(item.tipo||'Serviço').toUpperCase();
+      const detail=document.createElement('div');detail.className='muted';
+      detail.textContent='Cliente: '+String(item.cliente_nome||'Não informado')+' | Obra: '+String(item.obra_nome||'Não informada')+' | Endereço: '+String(item.obra_endereco||'Não informado')+' | Programado: '+(item.programado_para?new Date(item.programado_para).toLocaleString('pt-BR'):'não informado');
+      const obs=document.createElement('div');obs.textContent=String(item.observacoes||'');
+      div.append(heading,detail,obs);
+      if(item.tipo==='entrega'){
+        const action=document.createElement('button');
+        action.type='button';action.textContent='Preparar confirmação (teste)';
+        action.addEventListener('click',()=>window.bnPrepararConfirmacaoRemota(item.id,div,action));
+        div.append(action);
+      }
+      target.append(div);
+    }
+  }catch(e){
+    if(document.getElementById('bn-tarefas-remotas'))target.textContent='Consulta não disponível: '+(e.message||'erro desconhecido')+'. Verifique se a migração e as políticas RLS foram aplicadas. Nenhum dado foi alterado.';
+  }
+};
+
+// ETAPA 24 — fluxo de confirmação explícita; requer migração e RPC previamente validadas.
+// Não usa IDs locais, não importa caçambas de teste e nunca confirma automaticamente.
+window.bnPrepararConfirmacaoRemota=async function(agendaId,container,button){
+  button.disabled=true;
+  if(location.protocol==='file:'){const aviso=document.createElement('div');aviso.textContent='Teste local: não é possível confirmar entregas pelo arquivo aberto diretamente. Use somente ambiente de homologação autorizado.';container.append(aviso);button.disabled=false;return;}
+  try{
+    if(usuarioAutenticado?.perfil!=='motorista')throw new Error('Acesso exclusivo do motorista.');
+    const {data:{user},error:authError}=await supa.auth.getUser();
+    if(authError||!user)throw new Error('Sessão não autenticada.');
+    const {data,error}=await supa.from('cacambas').select('id,numero')
+      .eq('situacao','disponivel').order('numero',{ascending:true}).limit(200);
+    if(error)throw error;
+    if(!data?.length)throw new Error('Nenhuma caçamba real disponível no Supabase.');
+    const area=document.createElement('div');area.className='panel';
+    const label=document.createElement('label');label.textContent='Caçamba real disponível: ';
+    const select=document.createElement('select');
+    for(const c of data){const option=document.createElement('option');option.value=c.id;option.textContent='Caçamba '+c.numero;select.append(option);}
+    label.append(select);
+    const prazoLabel=document.createElement('label');prazoLabel.textContent=' Prazo (dias): ';
+    const prazo=document.createElement('select');
+    for(const n of [7,15,30]){const option=document.createElement('option');option.value=String(n);option.textContent=String(n);prazo.append(option);}
+    prazoLabel.append(prazo);
+    const confirm=document.createElement('button');confirm.type='button';confirm.textContent='Confirmar entrega no Supabase';
+    const status=document.createElement('div');status.className='muted';
+    confirm.addEventListener('click',async()=>{
+      if(!window.confirm('Confirmar a entrega REAL desta caçamba? Esta ação grava locação e OS no Supabase.'))return;
+      confirm.disabled=true;status.textContent='Enviando confirmação...';
+      try{
+        const result=await window.BigNorteConfirmacaoRemota.confirmarEntrega({agendaId,cacambaId:select.value,prazoDias:Number(prazo.value),comprovante:{}});
+        status.textContent='OS '+result.numeroOS+(result.jaConfirmada?' (já confirmada)':' (registrada)');
+        select.disabled=true;prazo.disabled=true;
+        button.textContent='Entrega confirmada — OS '+result.numeroOS;
+        button.disabled=true;
+        const taskStatus=container.querySelector('.bn-confirmacao-resultado');
+        if(!taskStatus){const msg=document.createElement('div');msg.className='bn-confirmacao-resultado';msg.textContent='Confirmação registrada no Supabase. Atualize as tarefas para verificar a situação.';container.append(msg);}
+      }catch(e){status.textContent='Não foi possível confirmar: '+e.message+' Verifique a OS antes de tentar novamente.';}
+      // Não reabilitar automaticamente após erro de rede: resposta pode ter sido perdida.
+    });
+    area.append(label,prazoLabel,confirm,status);container.append(area);
+  }catch(e){const error=document.createElement('div');error.textContent='Confirmação indisponível: '+e.message;container.append(error);button.disabled=false;}
+};
+</script>
+<script>
+// Fonte de verdade operacional: Supabase. Nenhum registro local é importado.
+let bnDadosProntos=false, bnEmCarga=null;
+const bnDia=s=>s?new Date(s).toLocaleDateString('en-CA',{timeZone:'America/Fortaleza'}):'';
+const bnHora=s=>s?new Date(s).toLocaleTimeString('pt-BR',{timeZone:'America/Fortaleza',hour:'2-digit',minute:'2-digit'}):'';
+function bnData(data,hora='08:00') {
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(data||'')||!/^\d{2}:\d{2}$/.test(hora||''))throw Error('Informe data e horário (HH:MM).');
+ const iso=data+'T'+hora+':00-03:00';if(!Number.isFinite(Date.parse(iso)))throw Error('Data inválida.');return iso;
+}
+async function bnRpc(nome,args={}){const {data,error}=await supa.rpc(nome,args);if(error)throw Error(error.message);return data;}
+function bnAdmin(){if(!['administrador','administrativo'].includes(usuarioAutenticado?.perfil))throw Error('Acesso administrativo obrigatório.');}
+async function bnGravar(event,acao){event?.preventDefault();const b=event?.target?.querySelector('button.primary');if(b?.disabled)return;if(b)b.disabled=true;try{await acao()}catch(e){alert(e.message)}finally{if(b?.isConnected)b.disabled=false}}
+function bnMapAgenda(a,obras,osList){
+ const ob=obras.find(o=>o.id===a.obra_id)||{};const os=osList.find(o=>o.agenda_id===a.id);
+ const t=db.equipes.find(t=>t.id===a.equipe_id)||{};const p=os?.comprovante||{};
+ return {...a,id:a.id,clienteId:a.cliente_id,obraId:a.obra_id,endereco:ob.endereco||a.obra_endereco||'',obra:ob.nome||a.obra_nome||'',data:bnDia(a.programado_para),hora:a.horario_informado===false?'':bnHora(a.programado_para),instrucoes:a.observacoes||'',situacao:a.status==='confirmado'?'encaminhado':a.status==='pendente'?'agendado':a.status,equipeId:a.equipe_id,motoristaId:t.motoristaId,ajudanteId:t.ajudanteId,motorista:a.motorista||nomeCol(t.motoristaId),auxiliar:a.auxiliar||nomeCol(t.ajudanteId),caminhao:a.caminhao||db.veiculos.find(v=>v.id===a.veiculo_id)?.identificacao||'',locacaoId:os?.locacao_id||a.locacao_id,osId:os?.id,os:os?bnNumeroOS(os):null,tentativas:[],observacoes:p.observacao?[{data:bnDia(os.concluido_em),texto:p.observacao}]:[],fotos:p.fotos||[],assinatura:p.assinatura||'',assinaturaMotorista:a.dados_execucao?.assinaturaMotorista||a.assinaturaMotorista||'',assinaturaAjudante:a.dados_execucao?.assinaturaAjudante||a.assinaturaAjudante||'',recebedor:p.recebedor||'',recebimento:p.recebimento||'',gps:p.gps};
+}
+function bnNumeroOS(o){return o.ano_referencia&&o.sequencial_ano?String(o.sequencial_ano).padStart(2,'0')+'/'+o.ano_referencia:String(o.numero);}
+async function bnAtualizar(){
+ if(bnEmCarga)return bnEmCarga;
+ bnEmCarga=(async()=>{
+  bnDadosProntos=false;
+  if(usuarioAutenticado?.perfil==='motorista'){
+   const [rows,cacs]=await Promise.all([bnRpc('bn_minhas_tarefas'),bnRpc('bn_cacambas_disponiveis')]);
+   db.clientes=Array.from(new Map(rows.map(a=>[a.cliente_id,{id:a.cliente_id,nome:a.cliente_nome,telefone:a.cliente_telefone}])).values());
+   db.agenda=rows.map(a=>bnMapAgenda(a,[],[]));db.cacambas=cacs.map(c=>({...c,n:c.numero,maintenance:false}));db.locacoes=[];
+  }else{
+   const d=await bnRpc('bn_operacao_dados');if(!d||!Array.isArray(d.agenda)||!Array.isArray(d.cacambas))throw Error('Resposta operacional inválida');
+   db.obras=d.obras;db.clientes=d.clientes.map(c=>({...c,obras:d.obras.filter(o=>o.cliente_id===c.id)}));
+   db.cacambas=d.cacambas.map(c=>({...c,n:c.numero,maintenance:c.situacao==='manutencao'}));
+   db.agenda=d.agenda.map(a=>bnMapAgenda(a,d.obras,d.os));
+   // OS existentes sem agenda continuam consultáveis.
+   for(const o of d.os.filter(o=>!d.agenda.some(a=>a.id===o.agenda_id)))db.agenda.push(bnMapAgenda({id:o.id,cliente_id:o.cliente_id,obra_id:o.obra_id,tipo:o.tipo,status:'concluido',equipe_id:o.equipe_id,veiculo_id:o.veiculo_id,programado_para:o.programado_para},d.obras,[{...o,agenda_id:o.id}]));
+   db.locacoes=d.locacoes.map(l=>{
+    const c=db.cacambas.find(c=>c.id===l.cacamba_id);const ob=d.obras.find(o=>o.id===l.obra_id);const origem=d.os.find(o=>o.locacao_id===l.id&&['entrega','troca'].includes(o.tipo));
+    const pend=d.agenda.find(a=>a.locacao_id===l.id&&['pendente','confirmado'].includes(a.status));
+    return {...l,clienteId:l.cliente_id,obraId:l.obra_id,n:c?.n,endereco:ob?.endereco||'',entrega:bnDia(l.inicio_em),vencimento:bnDia(l.previsao_retirada),retirada:l.status==='encerrada'?bnDia(l.retirada_em)||'Encerrada':l.status==='cancelada'?'Cancelada':false,retiradaAgendada:pend?bnDia(pend.programado_para):null,os:origem?bnNumeroOS(origem):null,...(origem?.comprovante?.gps||{})};
+   });
+  }
+  bnDadosProntos=true;render();
+ })();try{return await bnEmCarga}finally{bnEmCarga=null}
+}
+const bnRenderBase=render;
+render=function(){
+ if(!usuarioAutenticado)return;
+ if(!bnDadosProntos){$('#app').innerHTML='<div class="panel"><h2>Dados operacionais</h2><p>Os dados do Supabase ainda não foram carregados.</p><button onclick="bnAtualizar().catch(e=>alert(e.message))">Carregar / tentar novamente</button></div>';$('#nav').innerHTML='';return;}
+ // O perfil da sessão define a interface; o servidor verifica toda operação.
+ $('#perfil').value=usuarioAutenticado.perfil==='administrador'?'admin':usuarioAutenticado.perfil;
+ if(view==='usuarios'&&usuarioAutenticado.perfil!=='administrador')view='painel';
+ bnRenderBase();
+};
+const bnVerificarBase=verificarSessao;
+verificarSessao=async function(){bnDadosProntos=false;await bnVerificarBase();if(usuarioAutenticado)try{await bnAtualizar()}catch(e){render();alert('Não foi possível carregar a operação: '+e.message)}};
+const bnBloquearBase=bloquearSistema;
+bloquearSistema=function(msg=''){bnDadosProntos=false;db.agenda=[];db.locacoes=[];db.clientes=[];db.cacambas=[];db.colaboradores=[];db.equipes=[];db.veiculos=[];bnBloquearBase(msg);closeModal()};
+save=function(){localStorage.setItem('bn_cacambas_preferencias_v2',JSON.stringify({config:db.config,orcamentos:db.orcamentos,recibos:db.recibos,avaliacoes:db.avaliacoes}));render()};
+ehAdministrador=function(){return usuarioAutenticado?.perfil==='administrador'};
+function bnPedidoAgenda(f){return {tipo:f.tipo,cliente_id:f.clienteExistente||null,nome:f.nome||'',telefone:f.telefone||'',tipo_cliente:f.tipoCliente==='Empreiteiro'?'PJ':f.tipoCliente,endereco:f.endereco,obra_nome:f.obra||'',programado_para:bnData(f.data,f.hora||'12:00'),horario_informado:!!f.hora,prioridade:f.prioridade,observacoes:[f.instrucoes,f.responsavel?'Responsável: '+f.responsavel:'',f.telResponsavel?'Telefone responsável: '+f.telResponsavel:''].filter(Boolean).join('\n')}}
+salvarAgenda=function(e){return bnGravar(e,async()=>{bnAdmin();const form=e.target;form.dataset.pedidoId||=crypto.randomUUID();const dados=bnPedidoAgenda(getForm('fa'));if(dados.tipo!=='entrega')throw Error('Agende trocas e retiradas na aba Locações, vinculadas à caçamba atual.');await bnRpc('bn_salvar_agenda',{p_id:form.dataset.pedidoId,p_dados:dados});closeModal();await bnAtualizar()})};
+const bnNovaAgendaBase=novaAgenda;
+novaAgenda=function(){bnAdmin();bnNovaAgendaBase();const tipo=document.querySelector('#fa [name=tipo]');tipo.innerHTML='<option value="entrega">Entrega</option>';document.querySelector('#fa [name=hora]').required=false};
+const bnAgendaBase=agenda;
+agenda=function(){return bnAgendaBase().replace(/<button type="button" onclick="consultarAgendaSupabaseEtapa11\(\)">.*?<\/button>/,'').replace(/<button type="button" onclick="verificarModuloEtapa16\(\)">.*?<\/button>/,'<button onclick="bnAtualizar().catch(e=>alert(e.message))">Atualizar</button>')};
+salvarAtrib=function(e,id){return bnGravar(e,async()=>{bnAdmin();const f=getForm('fat');await bnRpc('bn_alterar_agenda',{p_id:id,p_acao:'atribuir',p_dados:{equipe_id:f.equipeId,veiculo_id:f.veiculoId||null}});closeModal();await bnAtualizar()})};
+reagendar=async function(id){try{bnAdmin();const a=db.agenda.find(a=>a.id===id);const data=prompt('Nova data (AAAA-MM-DD)',a.data);if(!data)return;const hora=prompt('Horário (HH:MM) — deixe vazio se não houver',a.hora||'');if(hora===null)return;await bnRpc('bn_alterar_agenda',{p_id:id,p_acao:'reagendar',p_dados:{programado_para:bnData(data,hora||'12:00'),horario_informado:!!hora}});await bnAtualizar()}catch(e){alert(e.message)}};
+cancelar=async function(id){try{bnAdmin();const motivo=prompt('Motivo do cancelamento');if(!motivo?.trim())return;await bnRpc('bn_alterar_agenda',{p_id:id,p_acao:'cancelar',p_dados:{motivo}});await bnAtualizar()}catch(e){alert(e.message)}};
+salvarAgendamentoRetirada=function(e,id,tipo='retirada'){return bnGravar(e,async()=>{bnAdmin();const f=getForm('fret');e.target.dataset.pedidoId||=crypto.randomUUID();await bnRpc('bn_salvar_agenda',{p_id:e.target.dataset.pedidoId,p_dados:{tipo,locacao_id:id,equipe_id:f.equipeId,veiculo_id:f.veiculoId||null,programado_para:bnData(f.data,f.hora||'12:00'),horario_informado:!!f.hora,observacoes:f.instrucoes||'',prioridade:'Normal'}});closeModal();await bnAtualizar()})};
+const bnRetiradaBase=agendarRetirada;
+agendarRetirada=function(id,tipo='retirada'){bnAdmin();bnRetiradaBase(id,tipo);const h=document.querySelector('#fret [name=hora]');if(h){h.type='time';h.required=false;h.placeholder='Opcional'}};
+tarefas=function(){return `<div class="panel"><h2>Minhas tarefas</h2><button onclick="bnAtualizar().catch(e=>alert(e.message))">Atualizar tarefas</button>${db.agenda.map(a=>`<div class="item"><b>${esc(a.tipo.toUpperCase())} — ${esc(cliente(a.clienteId)?.nome)}</b><div>${esc(a.endereco)}</div><p>${esc(a.data)} ${esc(a.hora)}</p>${btn('Abrir tarefa',`abrirOS('${a.id}')`,'primary')}${btn('Não executada',`naoExecutada('${a.id}')`)}</div>`).join('')||'<p>Nenhuma tarefa atribuída à sua equipe.</p>'}</div>`};
+naoExecutada=async function(id){const motivo=prompt('Motivo da não execução');if(!motivo?.trim())return;try{await bnRpc('bn_nao_executada',{p_id:id,p_motivo:motivo});await bnAtualizar()}catch(e){alert(e.message)}};
+let bnFotos=[],bnPedidoConfirmacao=null;
+const bnAbrirOSBase=abrirOS;
+abrirOS=function(id){
+ const a=db.agenda.find(a=>a.id===id);if(!a)return;
+ bnFotos=[];bnPedidoConfirmacao=null;bnAbrirOSBase(id);
+ if(a.situacao==='concluido'){document.getElementById('fos')?.remove();return;}
+ const form=document.getElementById('fos');
+ // Assinatura e identificação também em trocas e retiradas.
+ if(a.tipo!=='entrega'){
+  const area=document.createElement('div');area.innerHTML=field('Nome do recebedor / responsável','recebedor','text','','required')+select('Recebimento','recebimento',[['assinado','Com assinatura'],['autorizado','Autorizado sem assinatura (exige foto)']])+'<div id="areaAssinatura"><label>Assinatura do cliente / responsável</label><canvas id="assinaturaCanvas" class="signature-pad"></canvas><button type="button" onclick="limparAssinatura()">Limpar</button></div>';
+  form.prepend(area);iniciarAssinatura();
+  form.elements.recebimento.onchange=()=>{$('#areaAssinatura').style.display=form.elements.recebimento.value==='assinado'?'block':'none'};
+ }
+ const r=form.elements.recebedor;if(r)r.required=true;
+ const b=form.querySelector('button.primary:last-of-type');
+ const submit=form.querySelector('button.primary:not([type])');if(submit)submit.textContent=a.tipo==='retirada'?'Confirmar retirada sem nova OS':'Confirmar '+a.tipo+' e gerar OS';
+};
+const bnFotoBase=finalizarFotoCarimbada;
+finalizarFotoCarimbada=async function(img){await bnFotoBase(img);if(bnFotos.length>=6){alert('Limite de seis fotos por operação.');return}bnFotos.push(fotoTemporaria);document.getElementById('previewFoto').innerHTML=bnFotos.map(f=>`<img class="photo-preview" src="${f}" alt="Foto registrada">`).join('');};
+salvarOS=function(e,id){return bnGravar(e,async()=>{
+ if(usuarioAutenticado?.perfil!=='motorista')throw Error('Apenas o motorista responsável confirma esta operação.');
+ const a=db.agenda.find(a=>a.id===id),f=getForm('fos');if(!a||a.situacao==='concluido')throw Error('Tarefa indisponível.');
+ if(!bnPedidoConfirmacao){
+  if(!f.recebedor?.trim())throw Error('Informe o nome do recebedor.');
+  if(f.recebimento==='assinado'&&!assinaturaAlterada)throw Error('Colete a assinatura do responsável.');
+  if(f.recebimento==='autorizado'&&!bnFotos.length)throw Error('Recebimento sem assinatura exige fotografia.');
+  const cac=a.tipo==='retirada'?null:db.cacambas.find(c=>c.n===Number(a.tipo==='troca'?f.nTroca:f.n));if(a.tipo!=='retirada'&&!cac)throw Error('Selecione uma caçamba disponível.');
+  const comprovante={recebedor:f.recebedor.trim(),recebimento:f.recebimento,assinatura:f.recebimento==='assinado'?$('#assinaturaCanvas').toDataURL('image/png'):null,fotos:[...bnFotos],gps:gpsTemporario,observacao:f.observacao||''};
+  bnPedidoConfirmacao={p_agenda_id:id,p_cacamba_id:cac?.id||null,p_prazo_dias:Number(a.tipo==='troca'?f.prazoTroca:f.prazo)||7,p_comprovante:comprovante};
+  if(new Blob([JSON.stringify(comprovante)]).size>8000000){bnPedidoConfirmacao=null;throw Error('Fotos muito grandes. Reabra a tarefa e use menos fotos.');}
+ }
+ // Em erro de rede, repetir envia exatamente o mesmo pedido idempotente.
+ const result=await bnRpc('bn_concluir_operacao',bnPedidoConfirmacao);
+ if(a.tipo==='retirada'){if(!result?.retirada_registrada)throw Error('Resposta incompleta da retirada.');}else if(!result?.os_id||!result?.numero_os)throw Error('Resposta incompleta.');
+ closeModal();bnPedidoConfirmacao=null;alert(a.tipo==='retirada'?'Retirada registrada sem nova OS.':('Operação confirmada. OS '+result.numero_os));await bnAtualizar();
+})};
+// Remover caminhos antigos de gravação local e pontes que não carregavam provas.
+window.bnPrepararConfirmacaoRemota=async function(id){abrirOS(id)};
+window.bnConsultarTarefasRemotas=()=>bnAtualizar();
+// V4: Renovacao atomica no Supabase, gerando uma OS numerada.
+renovar=function(id){
+ try{
+  bnAdmin();const l=db.locacoes.find(x=>x.id===id);
+  if(!l||l.retirada)throw Error('Locação ativa não encontrada.');
+  modal(`<h2>Renovar locação — Caçamba ${esc(String(l.n).padStart(3,'0'))}</h2>
+   <p class="muted">Vencimento atual: ${esc(l.vencimento)}.</p>
+   <form id="frenovar" onsubmit="salvarRenovacao(event,'${id}')">
+   ${select('Renovar por','dias',[[7,'7 dias'],[15,'15 dias'],[30,'30 dias']])}
+   <p class="muted">A confirmação atualizará o vencimento e gerará automaticamente uma nova OS vinculada à locação.</p>
+   <div class="actions"><button class="primary">Confirmar renovação e gerar OS</button>${btn('Cancelar','closeModal()')}</div></form>`);
+ }catch(e){alert(e.message)}
+};
+salvarRenovacao=function(e,id){return bnGravar(e,async()=>{
+ bnAdmin();const l=db.locacoes.find(x=>x.id===id);
+ if(!l||l.retirada)throw Error('Locação não está ativa.');
+ const form=e.target;const dias=Number(getForm('frenovar').dias);
+ if(![7,15,30].includes(dias))throw Error('Selecione 7, 15 ou 30 dias.');
+ if(!form.dataset.pedidoId){
+  if(!confirm(`Confirmar renovação da caçamba ${l.n} por ${dias} dias e gerar uma nova OS?`))return;
+  form.dataset.pedidoId=crypto.randomUUID();form.dataset.dias=String(dias);
+ }
+ if(String(dias)!==form.dataset.dias)throw Error('Prazo alterado após iniciar a confirmação. Feche e abra novamente.');
+ const resultado=await bnRpc('bn_renovar_locacao',{
+  p_pedido_id:form.dataset.pedidoId,p_locacao_id:id,p_prazo_dias:dias
+ });
+ if(!resultado?.os_id||!resultado?.numero_os)throw Error('Resposta de renovação incompleta. Não repita com outro pedido.');
+ closeModal();await bnAtualizar();alert('Renovação concluída. Nova OS '+resultado.numero_os+' • Vencimento: '+resultado.vencimento);
+})};
+toggleMaintenance=async function(n){try{if(!ehAdministrador())throw Error('Somente administrador.');const c=db.cacambas.find(c=>c.n===n);await bnRpc('bn_administrar_cacamba',{p_acao:c.maintenance?'disponivel':'manutencao',p_id:c.id,p_dados:{}});closeModal();await bnAtualizar()}catch(e){alert(e.message)}};
+iniciarManutencao=n=>toggleMaintenance(n);finalizarManutencao=n=>toggleMaintenance(n);
+novaLocacao=function(n){
+ try{bnAdmin()}catch(e){alert(e.message);return}
+ const livres=db.cacambas.filter(c=>status(c.n)==='disponivel');
+ if(!livres.length){alert('Não existem caçambas disponíveis.');return}
+ const obras=(db.obras||[]).filter(o=>db.clientes.some(c=>c.id===o.cliente_id));
+ if(!obras.length){alert('Cadastre um cliente e uma obra antes da implantação manual.');return}
+ modal(`<h2>Registrar locação existente — implantação</h2><p class="muted">Não cria Agenda, tarefa de motorista ou OS.</p><form id="fl" onsubmit="salvarLocacao(event)"><div class="formgrid">${select('Caçamba','cacambaId',livres.map(c=>[c.id,'Nº '+String(c.n).padStart(3,'0')]))}${select('Cliente / obra','obraId',obras.map(o=>[o.id,(db.clientes.find(c=>c.id===o.cliente_id)?.nome||'Cliente')+' — '+o.endereco]))}${field('Data inicial','inicio','date',today(),'required')}${select('Prazo','prazo',[[7,'7 dias'],[15,'15 dias'],[30,'30 dias']])}${field('Valor (opcional)','valor','number','','min="0" step="0.01"')}${field('Observações','observacoes')}</div><div class="actions"><button class="primary">Registrar sem OS</button>${btn('Cancelar','closeModal()')}</div></form>`);
+ if(n){const c=livres.find(c=>c.n===n);if(c)document.querySelector('#fl [name=cacambaId]').value=c.id}
+};
+salvarLocacao=function(e){return bnGravar(e,async()=>{
+ bnAdmin();const f=getForm('fl');const obra=db.obras.find(o=>o.id===f.obraId);if(!obra)throw Error('Selecione uma obra válida.');
+ if(!confirm('Registrar esta caçamba como LOCADA sem criar OS?'))return;
+ await bnRpc('bn_registrar_locacao_existente',{p_cacamba_id:f.cacambaId,p_obra_id:f.obraId,p_inicio:f.inicio,p_prazo_dias:Number(f.prazo),p_valor:f.valor?Number(f.valor):null,p_observacoes:f.observacoes||''});
+ closeModal();await bnAtualizar();alert('Locação existente cadastrada sem OS.');
+})};
+const bnStatusBase=status;status=function(n){const c=db.cacambas.find(c=>c.n===n);if(c&&['inativa','reservada','em_transporte'].includes(c.situacao))return c.situacao;return bnStatusBase(n)};
+Object.assign(types,{inativa:['Inativa','#475569'],reservada:['Reservada','#7c3aed'],em_transporte:['Em transporte','#0891b2']});
+// Orçamento continua documento local, mas sua conversão usa a Agenda remota.
+salvarAprovacao=function(e,id){return bnGravar(e,async()=>{bnAdmin();const o=db.orcamentos.find(o=>o.id===id);if(!o||o.situacao!=='Pendente')throw Error('Orçamento indisponível.');const f=getForm('faprov');o.pedidoAgendaId||=crypto.randomUUID();save();await bnRpc('bn_salvar_agenda',{p_id:o.pedidoAgendaId,p_dados:{tipo:'entrega',nome:o.clienteNome,telefone:o.telefone,tipo_cliente:o.tipoCliente==='Empreiteiro'?'PJ':o.tipoCliente,endereco:o.endereco,obra_nome:o.endereco,programado_para:bnData(f.data,f.hora),observacoes:'Orçamento '+o.numero+': '+o.descricao+' — Valor R$ '+o.valor,prioridade:f.prioridade}});o.situacao='Aprovado';o.agendaId=o.pedidoAgendaId;save();closeModal();await bnAtualizar()})};
+// Revisão de tentativas não executadas disponível ao administrativo.
+const bnAgendaComAviso=agenda;agenda=function(){return bnAgendaComAviso()+db.agenda.filter(a=>a.dados_execucao?.nao_execucao).map(a=>`<div class="notice">${esc(a.tipo)} — ${esc(a.endereco)}: não executada — ${esc(a.dados_execucao.nao_execucao)}</div>`).join('')};
+// Maiúsculas reais no valor do campo (não apenas efeito visual CSS).
+document.addEventListener('input',function(ev){
+ const el=ev.target;
+ if(!(el instanceof HTMLInputElement||el instanceof HTMLTextAreaElement))return;
+ const type=(el.getAttribute('type')||'text').toLowerCase();
+ if(el instanceof HTMLInputElement&&!['text','search'].includes(type))return;
+ if(el.id==='emailLogin'||el.id==='senhaLogin'||el.matches('[type=email],[type=password],[type=url],[name*=email i],[name*=senha i],[name*=url i],[name*=link i],[name*=token i],[name*=latitude i],[name*=longitude i],[name*=cpf i],[name*=cnpj i],[name*=cep i],[data-preserve-case]'))return;
+ const before=el.value,after=before.toLocaleUpperCase('pt-BR');
+ if(before===after)return;
+ const start=el.selectionStart,end=el.selectionEnd;
+ el.value=after;
+ try{el.setSelectionRange(start,end)}catch{}
+},true);
+// Configurações e documentos locais não são copiados para tabelas operacionais.
+const bnSalvarConfigBase=salvarConfiguracoes;
+salvarConfiguracoes=function(e){e.preventDefault();const f=getForm('fconfig');db.config={...db.config,...f,nome:(f.nome||'').trim()||'BIG NORTE - GESTÃO DE CAÇAMBAS',uf:(f.uf||'').trim().toUpperCase()};if(novaLogo!==null)db.config.logo=novaLogo;if(novaAssinaturaResponsavel!==null)db.config.assinaturaResponsavel=novaAssinaturaResponsavel;try{save();novaLogo=null;novaAssinaturaResponsavel=null;alert('Configurações salvas neste aparelho.')}catch(err){alert('Não foi possível salvar as configurações: '+err.message)}};
+resetar=function(){alert('A reinicialização local foi removida. Os dados operacionais são mantidos no Supabase.');};
+
 verificarSessao();
-</script></body></html>
+</script>
+</body></html>
